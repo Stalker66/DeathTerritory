@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ce32e1d-646a-48df-b551-42f43c41b2e5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scenes/tutorials.lua" afterPath="$PROJECT_DIR$/scenes/tutorials.lua" />
     </list>
     <ignored path="DeathTerritory.iws" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="tutorials.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scenes/tutorials.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+            <state relative-caret-position="170">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -598,12 +599,12 @@
       <option name="presentableId" value="Default" />
       <updated>1474867335461</updated>
       <workItem from="1474867337267" duration="21000" />
-      <workItem from="1474867382491" duration="1003000" />
+      <workItem from="1474867382491" duration="1292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1024000" />
+    <option name="totallyTimeSpent" value="1313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="446" y="0" width="1469" height="1080" extended-state="0" />
@@ -662,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scenes/tutorials.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
