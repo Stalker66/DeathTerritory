@@ -15,38 +15,39 @@ soundOnGame = false; --  Переменная содержит параметр�
 -- ФУНКЦИИ
 -- Загружаем текст
 function funcLoadText(filename)
-	local path = system.pathForFile(filename, system.ResourceDirectory); -- Получаем путь к файлу
-	local contents = "";
-	local myTable = {};
-	local file = io.open(path, "r"); -- Открываем файл
-	if (file) then -- Если такой файл существует
-		 local contents = file:read( "*a" ); -- Читаем из него данные
-		 myTable = json.decode(contents); -- Расшифровываем их
-		 io.close(file); -- Закрываем файл
-		 return myTable; -- Возвращаем параметры из файла
-	end
-	return nil
-end 
+    local path = system.pathForFile(filename, system.ResourceDirectory); -- Получаем путь к файлу
+    local contents = "";
+    local myTable = {};
+    local file = io.open(path, "r"); -- Открываем файл
+    if (file) then -- Если такой файл существует
+    local contents = file:read("*a"); -- Читаем из него данные
+    myTable = json.decode(contents); -- Расшифровываем их
+    io.close(file); -- Закрываем файл
+    return myTable; -- Возвращаем параметры из файла
+    end
+    return nil
+end
 
 -- Подгрузка файла локализации
-function loadLocalization( language )
-	if language == "Rus" then
-		localization = funcLoadText("localization/rus.json");
-	elseif language == "Eng" then
-		localization = funcLoadText("localization/eng.json");
-	end
+function loadLocalization(language)
+    if language == "Rus" then
+        localization = funcLoadText("localization/rus.json");
+    elseif language == "Eng" then
+        localization = funcLoadText("localization/eng.json");
+    end
 end
 
 loadLocalization(language); -- Подгрузка/Обновление файла локализации
 
 -- Переходим к игре
- display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
+display.setStatusBar(display.HiddenStatusBar); -- Скрываем статус бар
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
+composer.gotoScene("scenes.location1", "fade", 500); -- Тестовый переход на локацию 1
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
 function updateText()
     fpsText.txt = display.fps;
- end
- Runtime:addEventListener("enterFrame", updateText);
+end
+
+Runtime:addEventListener("enterFrame", updateText);
