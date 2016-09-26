@@ -35,23 +35,23 @@ end
 
 -- ПАРАМЕТРЫ/ТЕКСТ/ПЕРЕХОД
 local optNPC = {
-      text = "",     
-      x = 641,
-      y = 235,
-      width = 600,
-      font = "font/AA-Futured",  
-      fontSize = 35,
-      align = "center" };
+    text = "",     
+    x = 641,
+    y = 235,
+    width = 600,
+    font = "font/AA-Futured",  
+    fontSize = 35,
+    align = "center" };
 txtNPC = display.newText( optNPC ); -- Диалог персонажей
 
 local optActor = {
-      text = "",     
-      x = 641,
-      y = 500,
-      width = 600,
-      font = "font/AA-Futured",  
-      fontSize = 35,
-      align = "center" };
+	text = "",     
+	x = 641,
+	y = 500,
+	width = 600,
+	font = "font/AA-Futured",  
+	fontSize = 35,
+	align = "center" };
 txtActor = display.newText( optActor ); -- Диалог героя
 
 txtNameNPC = display.newText("", 504, 110, "font/AA-Futured", 30); -- Имена персонажей
@@ -60,7 +60,7 @@ txtNameNPC = display.newText("", 504, 110, "font/AA-Futured", 30); -- Имена
 function DialogsScene:create(event)
 	-- ПЕРЕМЕННЫЕ
 	local grpDialogsScene = self.view; -- Группа
-  local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448 ); -- Лицо Героя
+    local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448 ); -- Лицо Героя
 	local imgBackgroundLoc1 = display.newImage(grpDialogsScene, "img/dialog.png", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
     -- АКТИВАТОРЫ/СЛУШАТЕЛИ
