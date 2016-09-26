@@ -6,7 +6,7 @@
 
 -- ФУНКЦИИ
 function createArrow(tutorialX,tutorialY,tutorialR)
-
+--Vlad
   imgArrow = display.newImage( "img/arrow.png", tutorialX, tutorialY );
   animateChange = false;
   --  Hello
