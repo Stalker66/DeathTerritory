@@ -9,7 +9,7 @@ function createArrow(tutorialX,tutorialY,tutorialR)
 
   imgArrow = display.newImage( "img/arrow.png", tutorialX, tutorialY );
   animateChange = false;
-
+  --  Hello
   local function animationArrowHorizontal()
     if animateChange == true then
       transition.to( imgArrow, { time=500, x=tutorialX } );
