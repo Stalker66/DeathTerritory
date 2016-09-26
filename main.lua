@@ -45,8 +45,8 @@ loadLocalization(language); -- Подгрузка/Обновление файл�
 composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
 -- FPS
- local fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
- local function updateText()
+fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
+function updateText()
     fpsText.txt = display.fps;
  end
  Runtime:addEventListener("enterFrame", updateText);

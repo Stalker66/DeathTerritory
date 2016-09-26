@@ -60,7 +60,7 @@ txtNameNPC = display.newText("", 504, 110, "font/AA-Futured", 30); -- Имена
 function DialogsScene:create(event)
 	-- ПЕРЕМЕННЫЕ
 	local grpDialogsScene = self.view; -- Группа
-    local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448 ); -- Лицо Героя
+  local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448 ); -- Лицо Героя
 	local imgBackgroundLoc1 = display.newImage(grpDialogsScene, "img/dialog.png", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
     -- АКТИВАТОРЫ/СЛУШАТЕЛИ
