@@ -9,7 +9,7 @@ function createArrow(tutorialX,tutorialY,tutorialR)
 --Vlad
   imgArrow = display.newImage( "img/arrow.png", tutorialX, tutorialY );
   animateChange = false;
-  --  Hello s
+  --  Hello
   local function animationArrowHorizontal()
     if animateChange == true then
       transition.to( imgArrow, { time=500, x=tutorialX } );
