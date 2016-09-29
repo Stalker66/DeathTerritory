@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------
--- Первая локация
+-- Окрестности машины
 -- location1.lua
 -- Выпадко Владислав
 -----------------------------------------------------------------------------------------
@@ -9,15 +9,15 @@ local composer = require "composer"; -- Подгружаем библиотек�
 local widget = require("widget"); -- Подгружаем библиотеку виджетов
 local movieclip = require("movieclip"); -- Подгружаем библиотеку мувиклипов
 local tutorials = require("scenes.tutorials"); -- Подгружаем библиотеку обучения
-local Location1Scene = composer.newScene(); -- Создаём новую сцену
+local Location1Event1 = composer.newScene(); -- Создаём новую сцену
 
-function Location1Scene:create(event)
+function Location1Event1:create(event)
 	-- ПЕРЕМЕННЫЕ
-	local grpLocation1Scene = self.view; -- Группа
-	local imgBackgroundLoc1 = display.newImage(grpLocation1Scene, "img/location1.png", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
-	local butLoc1Car = display.newImage(grpLocation1Scene, "img/loc1_car.jpg", 420.5, 369.5 ); -- Машина
-	local butLoc1House = display.newImage(grpLocation1Scene, "img/loc1_house.jpg", 1065.50, 252 ); -- Дом
-	local imgCharacterLena = display.newImage(grpLocation1Scene, "img/lena.png", display.contentCenterX, 600 ); -- Лена
+	local grpLocation1Event1 = self.view; -- Группа
+	local imgBackgroundLoc1 = display.newImage(grpLocation1Event1, "img/location1.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
+	local butLoc1Car = display.newRect( 419, 352, 600, 225 ); -- Машина
+		  butLoc1Car.alpha = alpha;
+	local imgCharacterLena = display.newImage(grpLocation1Event1, "img/lena.png", display.contentCenterX, 600 ); -- Лена
 
 	-- ПАРАМЕТРЫ/ТЕКСТ/ПЕРЕХОД
 	local optionsShowDialog = {
@@ -29,6 +29,8 @@ function Location1Scene:create(event)
 		if event.phase == "began" then
 			deleteArrow();
 			butLoc1Car:removeEventListener( "touch", funcBeganCar );
+			composer.removeScene( "scenes.location1" );
+			composer.gotoScene( "scenes.location2", "fade", 100 );
 		end
 	end
 
@@ -67,5 +69,5 @@ function Location1Scene:create(event)
 	timer.performWithDelay( 1000, funcStartDialog )
 end
 
-Location1Scene:addEventListener("create", Location1Scene); -- Создание сцены
-return Location1Scene;
+Location1Event1:addEventListener("create", Location1Event1); -- Создание сцены
+return Location1Event1;
