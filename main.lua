@@ -39,11 +39,6 @@ end
 
 loadLocalization(language); -- Подгрузка/Обновление файла локализации
 
--- Переходим к игре
-display.setStatusBar(display.HiddenStatusBar); -- Скрываем статус бар
---composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene("scenes.location1", "fade", 500); -- Тестовый переход на локацию 1
-
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
 function updateText()
@@ -51,3 +46,8 @@ function updateText()
 end
 
 Runtime:addEventListener("enterFrame", updateText);
+
+-- Переходим к игре
+display.setStatusBar(display.HiddenStatusBar); -- Скрываем статус бар
+--composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
+composer.gotoScene("scenes.location2", "fade", 500); -- Тестовый переход на локацию 1
