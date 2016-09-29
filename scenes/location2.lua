@@ -4,11 +4,7 @@
 -- Выпадко Владислав
 -----------------------------------------------------------------------------------------
 
--- Подгрузка библиотек
-local composer = require "composer"; -- Подгружаем библиотеку создания сцен
-local widget = require("widget"); -- Подгружаем библиотеку виджетов
-local movieclip = require("movieclip"); -- Подгружаем библиотеку мувиклипов
-local tutorials = require("scenes.tutorials"); -- Подгружаем библиотеку обучения
+-- СЦЕНЫ
 local Location2Event1 = composer.newScene(); -- Создаём новую сцену
 
 function Location2Event1:create(event)
