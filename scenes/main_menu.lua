@@ -11,16 +11,16 @@ local MainMenuScene = composer.newScene(); -- Создаём новую сцен
 function MainMenuScene:create(event)
 	-- ПЕРЕМЕННЫЕ
 	local grpMainMenuScene = self.view; -- Группа
-	local imgBackgroundMenu = display.newImage(grpMainMenuScene, "img/main_menu.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
-	local butEnterEng = display.newImage(grpMainMenuScene, "img/eng.png", 688, 340 ); -- Кнопка переключение на английский
-	local butEnterRus = display.newImage(grpMainMenuScene, "img/rus.png", 688, 425 ); -- Кнопка переключение на русский
-	local butVk = display.newImage(grpMainMenuScene, "img/vk.png", 47, 645 ); -- Кнопка перехода в группу ВК
+	local imgBackgroundMenu = display.newImage(grpMainMenuScene, "img/menu/main_menu.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
+	local butEnterEng = display.newImage(grpMainMenuScene, "img/menu/eng.png", 688, 340 ); -- Кнопка переключение на английский
+	local butEnterRus = display.newImage(grpMainMenuScene, "img/menu/rus.png", 688, 425 ); -- Кнопка переключение на русский
+	local butVk = display.newImage(grpMainMenuScene, "img/menu/vk.png", 47, 645 ); -- Кнопка перехода в группу ВК
 	local butNewGame = display.newText(grpMainMenuScene, "", 1003, 498, "font/AA-Futured", 45); -- Кнопка "Начать игру"
 	local butCredits = display.newText(grpMainMenuScene, "", 1000, 614, "font/AA-Futured", 45); -- Кнопка "Титры"
-	local urlLogo = "img/logo_"; -- LOGO
+	local urlLogo = "img/menu/logo_"; -- LOGO
  	local imgLogoMenu =  movieclip.newAnim{urlLogo.."rus.png",  -- Лого Rus
 										urlLogo.."eng.png"}; -- Лого Eng
-	local urlSound = "img/sound_"; -- Sound
+	local urlSound = "img/menu/sound_"; -- Sound
  	local butSoundMenu =  movieclip.newAnim{urlSound.."on.png",  -- Звук включен
 										urlSound.."off.png"}; -- Звук выключен
 	local arrQuotations = {"","","","","","","","","","",""}; -- Цитаты
@@ -57,7 +57,7 @@ function MainMenuScene:create(event)
 
 	-- Музыка в меню
 	local function funcPlayMusicToMenu()
-		media.playSound( "snd/menu.mp3" );
+		snd:play("main_menu");
 		soundOnGame = true;
 		butSoundMenu:stopAtFrame(1);
 		butSoundMenu.x = 47;

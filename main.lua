@@ -7,9 +7,13 @@
 -- Подгрузка библиотек
 composer = require "composer"; -- Подгружаем библиотеку создания сцен
 widget = require("widget"); -- Подгружаем библиотеку виджетов
-movieclip = require("movieclip"); -- Подгружаем библиотеку мувиклипов
 json = require("json"); -- Подгружаем библиотеку для работы с форматом json
-tutorials = require("scenes.tutorials"); -- Подгружаем библиотеку обучения
+movieclip = require("modules.movieclip"); -- Подгружаем библиотеку мувиклипов
+-- by Stalker66
+tutorials = require("modules.tutorials"); -- Подгружаем библиотеку обучения
+dialogs = require("modules.dialogs"); -- Подгружаем библиотеку диалогов
+tmr = require("modules.timer"); -- Подгружаем библиотеку таймера
+snd = require("modules.sounds_play"); -- Подгружаем библиотеку звука
 
 -- Глобальные переменные
 language = "Rus"; --  Переменная содержит выбранный язык приложения
