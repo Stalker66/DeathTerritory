@@ -41,29 +41,27 @@ local optNPC = {
     width = 600,
     font = "font/AA-Futured",
     fontSize = 35,
-    align = "center"
-};
-txtNPC = display.newText(optNPC); -- Диалог персонажей
+    align = "center" };
+txtNPC = display.newText( optNPC ); -- Диалог персонажей
 
 local optActor = {
-    text = "",
-    x = 641,
-    y = 500,
-    width = 600,
-    font = "font/AA-Futured",
-    fontSize = 35,
-    align = "center"
-};
-txtActor = display.newText(optActor); -- Диалог героя
+	text = "",
+	x = 641,
+	y = 500,
+	width = 600,
+	font = "font/AA-Futured",
+	fontSize = 35,
+	align = "center" };
+txtActor = display.newText( optActor ); -- Диалог героя
 
 txtNameNPC = display.newText("", 504, 110, "font/AA-Futured", 30); -- Имена персонажей
 
 -- Функции	
 function DialogsScene:create(event)
-    -- ПЕРЕМЕННЫЕ
-    local grpDialogsScene = self.view; -- Группа
-    local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448); -- Лицо Героя
-    local imgBackgroundLoc1 = display.newImage(grpDialogsScene, "img/dialog.png", display.contentCenterX, display.contentCenterY); -- Фоновый рисунок
+	-- ПЕРЕМЕННЫЕ
+	local grpDialogsScene = self.view; -- Группа
+    local imgFaceActor = display.newImage(grpDialogsScene, "img/face_andrey.jpg", 1053, 448 ); -- Лицо Героя
+	local imgBackgroundLoc1 = display.newImage(grpDialogsScene, "img/dialog.png", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
     -- АКТИВАТОРЫ/СЛУШАТЕЛИ
     grpDialogsScene:insert(imgFace);
@@ -71,11 +69,14 @@ function DialogsScene:create(event)
     grpDialogsScene:insert(txtActor);
     grpDialogsScene:insert(txtNPC);
     local txtNameActor = display.newText(grpDialogsScene, localization.actor_name_text, 770, 370, "font/AA-Futured", 30); -- Имя героя
-    txtNPC:setTextColor(192 / 255, 255 / 255, 62 / 255);
-    txtActor:setTextColor(188 / 255, 238 / 255, 104 / 255);
-    txtNameNPC:setTextColor(255 / 255, 165 / 255, 0 / 255);
-    txtNameActor:setTextColor(255 / 255, 165 / 255, 0 / 255);
+    txtNPC:setTextColor( 192/255, 255/255, 62/255 );
+    txtActor:setTextColor( 188/255, 238/255, 104/255 );
+    txtNameNPC:setTextColor( 255/255, 165/255, 0/255 );
+    txtNameActor:setTextColor( 255/255, 165/255, 0/255 );
 end
 
 DialogsScene:addEventListener("create", DialogsScene); -- Создание сцены
+Runtime:addEventListener('toggleDiary', function()
+    print('toggleDiary');
+end);
 return DialogsScene;

@@ -7,6 +7,7 @@
 -- Подгрузка библиотек
 local composer = require "composer"; -- Подгружаем библиотеку создания сцен
 local json = require("json"); -- Подгружаем библиотеку для работы с форматом json
+_G.Debug = require('lib.debug');
 
 -- Глобальные переменные
 language = "Rus"; --  Переменная содержит выбранный язык приложения
@@ -15,18 +16,18 @@ soundOnGame = false; --  Переменная содержит параметр�
 -- ФУНКЦИИ
 -- Загружаем текст
 function funcLoadText(filename)
-    local path = system.pathForFile(filename, system.ResourceDirectory); -- Получаем путь к файлу
-    local contents = "";
-    local myTable = {};
-    local file = io.open(path, "r"); -- Открываем файл
-    if (file) then -- Если такой файл существует
-    local contents = file:read("*a"); -- Читаем из него данные
-    myTable = json.decode(contents); -- Расшифровываем их
-    io.close(file); -- Закрываем файл
-    return myTable; -- Возвращаем параметры из файла
-    end
-    return nil
-end
+	local path = system.pathForFile(filename, system.ResourceDirectory); -- Получаем путь к файлу
+	local contents = "";
+	local myTable = {};
+	local file = io.open(path, "r"); -- Открываем файл
+	if (file) then -- Если такой файл существует
+		local contents = file:read( "*a" ); -- Читаем из него данные
+		myTable = json.decode(contents); -- Расшифровываем их
+		io.close(file); -- Закрываем файл
+		return myTable; -- Возвращаем параметры из файла
+	end
+	return nil
+end 
 
 -- Подгрузка файла локализации
 function loadLocalization(language)
@@ -39,15 +40,23 @@ end
 
 loadLocalization(language); -- Подгрузка/Обновление файла локализации
 
+local inventory = require('modules.inventory');
+inventory:new();
+inventory:addStuff('map');
+
+diary = require('modules.diary');
+diary:new();
+diary:toggleDiaryItem(1);
+diary:toggleDiaryItem(2);
+
+-- Переходим к игре
+display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
+--composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
+composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
+
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
 function updateText()
     fpsText.txt = display.fps;
 end
-
 Runtime:addEventListener("enterFrame", updateText);
-
--- Переходим к игре
-display.setStatusBar(display.HiddenStatusBar); -- Скрываем статус бар
---composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene("scenes.location2", "fade", 500); -- Тестовый переход на локацию 1

@@ -62,6 +62,8 @@ function Location1Scene:create(event)
         createDialog(localization.dialog1_say1_text, localization.next_text, localization.lena_name_text); -- Заполняем диалог текстом с файла
         txtActor:addEventListener("touch", funcDialogPhrase); -- Создаём управление диалогом
         createArrow(525, 495, "h"); -- Создаём стрелку
+        -- Insert to top
+        diary:getDisplayGroup():toFront();
     end
 
     -- АКТИВАТОРЫ/СЛУШАТЕЛИ
