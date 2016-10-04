@@ -19,18 +19,17 @@ function Location2Event1:create(event)
 		  butLoc2Glass1.rotation = 2;
 		  butLoc2Glass1.alpha = alpha;
 
-	-- ПАРАМЕТРЫ/ТЕКСТ/ПЕРЕХОД
-
 	-- ФУНКЦИИ
 	local function funcBeganTrunk( event )
 		if event.phase == "began" then
-			deleteArrow();
+			snd:play();
+			tutorials:removeArrow("trunkTutorial");
 			butLoc2Trunk:removeEventListener( "touch", funcBeganTrunk );
 		end
 	end
 
 	-- АКТИВАТОРЫ/СЛУШАТЕЛИ
-	createArrow(500,255,"v");
+	tutorials:showArrow("trunkTutorial",500,250,"vertical");
 	butLoc2Trunk:addEventListener( "touch", funcBeganTrunk );
 end
 

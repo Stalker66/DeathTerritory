@@ -2,189 +2,215 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ce32e1d-646a-48df-b551-42f43c41b2e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0004.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0005.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0006.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0007.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0008.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0009.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0010.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0011.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0012.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0013.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0014.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0015.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0016.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0017.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0018.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0019.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0020.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0021.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0022.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0023.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0024.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0025.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0026.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0027.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0028.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0029.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0030.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0031.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0032.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0033.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0034.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0035.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0036.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0037.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0038.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0039.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0040.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0041.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0042.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0043.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0044.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0045.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0046.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0047.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0048.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0049.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0050.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0051.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0052.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0053.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0054.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0055.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0056.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0057.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0058.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0059.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0060.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0061.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0062.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0063.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0064.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0065.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0066.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0067.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0068.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0069.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0070.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0071.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0072.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0073.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0074.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0075.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0076.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0077.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0078.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0079.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0080.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0081.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0082.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0083.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0084.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0085.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0086.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0087.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0088.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0089.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0090.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0091.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0092.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0093.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0094.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0095.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0096.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0097.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0098.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0099.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0101.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0102.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0103.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0104.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0105.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0106.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0107.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0108.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0109.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0110.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0111.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0112.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0113.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0115.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0116.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0117.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0118.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0119.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0120.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0121.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0122.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0123.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0124.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0125.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0126.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0127.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0129.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0130.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0131.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0132.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0133.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0134.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0135.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0136.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0137.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0138.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0139.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0140.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0141.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0142.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0143.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0145.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0146.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0147.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0148.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0149.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0150.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0151.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0152.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0153.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0154.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0155.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0156.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0157.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0158.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0159.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0160.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0161.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0162.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0163.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0164.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0165.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0166.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0167.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0168.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0169.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/img/timer/clock0170.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/sprite/timer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/location1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/location2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/code/location2.lua" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/sprite/timer.lua" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/loc1_car.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/loc1_house.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/location1.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/dialogs/face_no_data.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/timer/center_clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/timer/clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/timer/hand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/interaction/button.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/interaction/glass.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/interaction/metal.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/interaction/step.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/interaction/wood.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/others/give.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/others/timer.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/snd/others/wrote.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/code/dialogsTest.lua" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/dialogs.lua" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sounds_play.lua" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/timer.lua" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/tutorials.lua" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Документация.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0001.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0002.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0003.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0004.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0006.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0007.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0008.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0009.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0010.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0011.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0012.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0013.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0014.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0016.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0017.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0018.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0019.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0020.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0021.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0022.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0023.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0024.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0025.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0026.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0027.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0028.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0029.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0030.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0031.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0032.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0033.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0034.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0035.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0036.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0037.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0038.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0039.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0040.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0041.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0042.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0043.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0044.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0045.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0046.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0047.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0048.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0049.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0050.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0051.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0052.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0053.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0054.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0055.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0056.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0057.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0058.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0059.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0060.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0061.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0062.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0063.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0064.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0065.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0066.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0067.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0068.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0069.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0070.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0071.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0072.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0073.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0074.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0075.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0076.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0077.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0078.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0079.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0081.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0082.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0083.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0084.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0085.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0086.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0087.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0088.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0089.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0090.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0091.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0092.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0093.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0094.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0095.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0096.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0097.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0098.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0099.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0101.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0102.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0103.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0104.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0105.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0106.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0107.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0108.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0109.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0110.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0111.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0112.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0113.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0114.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0115.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0116.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0117.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0118.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0119.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0120.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0121.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0122.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0123.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0124.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0125.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0126.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0127.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0129.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0130.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0131.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0132.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0133.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0134.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0135.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0136.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0137.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0138.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0139.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0140.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0141.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0142.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0143.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0144.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0145.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0146.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0147.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0148.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0149.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0150.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0151.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0152.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0153.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0154.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0155.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0156.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0157.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0158.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0159.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0160.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0161.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0162.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0163.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0164.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0165.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0166.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0167.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0168.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0169.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/img/timer/clock0170.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/frame.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scenes/tutorials.lua" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.lua" afterPath="$PROJECT_DIR$/main.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scenes/dialogs.lua" afterPath="$PROJECT_DIR$/scenes/dialogs.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scenes/location1.lua" afterPath="$PROJECT_DIR$/scenes/location1.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scenes/location2.lua" afterPath="$PROJECT_DIR$/scenes/location2.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scenes/main_menu.lua" afterPath="$PROJECT_DIR$/scenes/main_menu.lua" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/arrow.png" afterPath="$PROJECT_DIR$/img/tutorials/arrow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/dialog.png" afterPath="$PROJECT_DIR$/img/dialogs/dialog.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/eng.png" afterPath="$PROJECT_DIR$/img/menu/eng.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/face_andrey.jpg" afterPath="$PROJECT_DIR$/img/dialogs/face_andrey.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/face_lena.jpg" afterPath="$PROJECT_DIR$/img/dialogs/face_lena.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logo_eng.png" afterPath="$PROJECT_DIR$/img/menu/logo_eng.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logo_rus.png" afterPath="$PROJECT_DIR$/img/menu/logo_rus.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/main_menu.jpg" afterPath="$PROJECT_DIR$/img/menu/main_menu.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/rus.png" afterPath="$PROJECT_DIR$/img/menu/rus.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/sound_off.png" afterPath="$PROJECT_DIR$/img/menu/sound_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/sound_on.png" afterPath="$PROJECT_DIR$/img/menu/sound_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/vk.png" afterPath="$PROJECT_DIR$/img/menu/vk.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/movieclip.lua" afterPath="$PROJECT_DIR$/modules/movieclip.lua" />
     </list>
     <ignored path="DeathTerritory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -211,60 +237,7 @@
     <favorites_list name="DeathTerritory" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="movieclip.lua" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/movieclip.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location1.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scenes/location1.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location2.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scenes/location2.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_menu.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scenes/main_menu.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -279,11 +252,11 @@
       <list>
         <option value="$PROJECT_DIR$/scenes/tutorials.lua" />
         <option value="$PROJECT_DIR$/config.lua" />
-        <option value="$PROJECT_DIR$/scenes/main_menu.lua" />
         <option value="$PROJECT_DIR$/scenes/dialogs.lua" />
         <option value="$PROJECT_DIR$/scenes/location1.lua" />
         <option value="$PROJECT_DIR$/main.lua" />
         <option value="$PROJECT_DIR$/movieclip.lua" />
+        <option value="$PROJECT_DIR$/scenes/main_menu.lua" />
       </list>
     </option>
   </component>
@@ -363,6 +336,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -383,8 +358,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -881,11 +854,12 @@
       <workItem from="1475154338510" duration="1065000" />
       <workItem from="1475166996002" duration="29000" />
       <workItem from="1475523233269" duration="130000" />
+      <workItem from="1475550532190" duration="152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9341000" />
+    <option name="totallyTimeSpent" value="9493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1084" extended-state="0" />
@@ -898,7 +872,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52756757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -941,6 +915,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scenes/location2.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/main_menu.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/movieclip.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -962,7 +952,7 @@
         <state relative-caret-position="340">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
           </folding>
         </state>
       </provider>
@@ -1004,7 +994,7 @@
         <state relative-caret-position="340">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
           </folding>
         </state>
       </provider>
@@ -1068,7 +1058,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
           </folding>
         </state>
       </provider>
@@ -1124,7 +1114,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
           </folding>
         </state>
       </provider>
@@ -1180,7 +1170,7 @@
         <state relative-caret-position="187">
           <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
           </folding>
         </state>
       </provider>
@@ -1263,44 +1253,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scenes/dialogs.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/main_menu.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/location1.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1475523314889" expanded="true" signature="0:93" ph="Первая локация" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/location2.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,6 +1279,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/location1.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1475550447605" expanded="true" signature="0:93" ph="Первая локация" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/location2.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/main_menu.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding />
         </state>
       </provider>
