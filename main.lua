@@ -14,6 +14,11 @@ tutorials = require("modules.tutorials"); -- Подгружаем библиот
 dialogs = require("modules.dialogs"); -- Подгружаем библиотеку диалогов
 tmr = require("modules.timer"); -- Подгружаем библиотеку таймера
 snd = require("modules.sounds_play"); -- Подгружаем библиотеку звука
+inventory = require('modules.inventory'); -- Inventory module
+diary = require('modules.diary'); -- Diary module
+
+-- Debug package
+_G.Debug = require('lib.debug');
 
 -- Глобальные переменные
 language = "Rus"; --  Переменная содержит выбранный язык приложения
@@ -37,18 +42,24 @@ function funcLoadText(filename)
 end 
 
 -- Подгрузка файла локализации
-function loadLocalization( language )
-	if language == "Rus" then
-		localization = funcLoadText("localization/rus.json");
-	elseif language == "Eng" then
-		localization = funcLoadText("localization/eng.json");
-	end
+function loadLocalization(language)
+    if language == "Rus" then
+        localization = funcLoadText("localization/rus.json");
+    elseif language == "Eng" then
+        localization = funcLoadText("localization/eng.json");
+    end
 end
 
 loadLocalization(language); -- Подгрузка/Обновление файла локализации
 
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
+
+-- Init inventory
+inventory:new();
+-- Init diary
+diary:new();
+
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
 composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
