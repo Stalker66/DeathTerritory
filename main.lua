@@ -24,7 +24,7 @@ globalConfig = {
 	language = "Rus", --  Переменная содержит выбранный язык приложения
 	soundOnGame = false, --  Переменная содержит параметры звука
 	alpha = 0.01, -- Прозрачность кнопок в игре
-	openedWindow = false
+	openedWindow = false -- Открыто ил окно
 }
 
 -- ФУНКЦИИ
@@ -45,9 +45,9 @@ end
 
 -- Подгрузка файла локализации
 function loadLocalization(language)
-    if language == "Rus" then
+    if globalConfig.language == "Rus" then
         localization = funcLoadText("localization/rus.json");
-    elseif language == "Eng" then
+    elseif globalConfig.language == "Eng" then
         localization = funcLoadText("localization/eng.json");
     end
 end
@@ -56,12 +56,8 @@ loadLocalization(globalConfig.language); -- Подгрузка/Обновлен�
 
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
-
--- Init inventory
-inventory:new();
--- Init diary
-diary:new();
-
+inventory:new(); -- Init inventory
+diary:new(); -- Init diary
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
 composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
