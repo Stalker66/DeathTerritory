@@ -33,9 +33,9 @@ function Inventory:setImages()
 	self.stuffs.map.x = self.stuffs.map.width/2 + 20;
 	self.stuffs.map.y = self.stuffs.map.y + 108;
 	self.stuffs.map.alpha = 0;
+	-- Review
 	self.stuffs.map.name = 'map';
 	self.stuffs.map:addEventListener('tap', showStuff);
-	-- Review
 	self.stuffs.review.map = display.newImage('img/modules/inventory/review/map.png', display.contentCenterX, display.contentCenterY);
 	self.stuffs.review.map.isVisible = false;
 
@@ -45,6 +45,11 @@ function Inventory:setImages()
 	self.stuffs.token.x = self.stuffs.token.width/2 - 10;
 	self.stuffs.token.y = self.stuffs.token.y + 0;
 	self.stuffs.token.alpha = 0;
+	-- Review
+	self.stuffs.token.name = 'token';
+	self.stuffs.token:addEventListener('tap', showStuff);
+	self.stuffs.review.token = display.newImage('img/modules/inventory/review/token.png', display.contentCenterX, display.contentCenterY);
+	self.stuffs.review.token.isVisible = false;
 
 	-- Back image
 	self.images.back = display.newImage('img/modules/common/back.png');
@@ -69,16 +74,19 @@ function Inventory:closeCloseBtn()
 end
 
 function showStuff(event)
+	closeStuff();
+	
 	local name = event.target.name;
-	Debug:print_r(event);
 	Inventory.currentOpenStuff = event.target.name;
 	Inventory:showCloseBtn(Inventory.stuffs.review[name]);
 	Inventory.stuffs.review[name].isVisible = true;
 end
 
 function closeStuff()
-	Inventory:closeCloseBtn();
-	Inventory.stuffs.review[Inventory.currentOpenStuff].isVisible = false;
+	if(Inventory.currentOpenStuff ~= nil) then
+		Inventory:closeCloseBtn();
+		Inventory.stuffs.review[Inventory.currentOpenStuff].isVisible = false;
+	end
 end
 
 function Inventory:getCurrentStuffs()

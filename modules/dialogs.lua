@@ -90,6 +90,7 @@ function Dialogs:removeDialog()
 	transition.fadeOut( self.grpDialogs, { time=200, onComplete=removeDialog } );
 end
 
+-- Chek dialog
 function Dialogs:changeOpenedWindow()
 	if globalConfig.openedWindow == false then
 		Dialogs:createDialog();

@@ -14,9 +14,11 @@ tutorials = require("modules.tutorials"); -- Подгружаем библиот
 dialogs = require("modules.dialogs"); -- Подгружаем библиотеку диалогов
 tmr = require("modules.timer"); -- Подгружаем библиотеку таймера
 snd = require("modules.sounds_play"); -- Подгружаем библиотеку звука
+-- by Bamiza
 inventory = require('modules.inventory'); -- Inventory module
 diary = require('modules.diary'); -- Diary module
-
+displayGroup = display.newGroup();
+displayGroup:insert(1, tutorials:getDisplayGroup());
 -- Debug package
 _G.Debug = require('lib.debug');
 
@@ -24,7 +26,7 @@ globalConfig = {
 	language = "Rus", --  Переменная содержит выбранный язык приложения
 	soundOnGame = false, --  Переменная содержит параметры звука
 	alpha = 0.01, -- Прозрачность кнопок в игре
-	openedWindow = false -- Открыто ил окно
+	openedWindow = false -- Открыто ли окно
 }
 
 -- ФУНКЦИИ
@@ -56,10 +58,8 @@ loadLocalization(globalConfig.language); -- Подгрузка/Обновлен�
 
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
-inventory:new(); -- Init inventory
-diary:new(); -- Init diary
-composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
---composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
+--composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
+composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
