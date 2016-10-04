@@ -91,4 +91,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .idea/workspace.xml
+.idea/copyright/profiles_settings.xml
 .idea/workspace.xml

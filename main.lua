@@ -14,6 +14,7 @@ tutorials = require("modules.tutorials"); -- Подгружаем библиот
 dialogs = require("modules.dialogs"); -- Подгружаем библиотеку диалогов
 tmr = require("modules.timer"); -- Подгружаем библиотеку таймера
 snd = require("modules.sounds_play"); -- Подгружаем библиотеку звука
+-- by Bamiza
 inventory = require('modules.inventory'); -- Inventory module
 diary = require('modules.diary'); -- Diary module
 
@@ -54,12 +55,8 @@ loadLocalization(language); -- Подгрузка/Обновление файл�
 
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
-
--- Init inventory
-inventory:new();
--- Init diary
-diary:new();
-
+inventory:new(); -- Init inventory
+diary:new(); -- Init diary
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
 composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
