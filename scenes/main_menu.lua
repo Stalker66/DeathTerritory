@@ -7,23 +7,23 @@
 -- СЦЕНЫ
 local MainMenuScene = composer.newScene(); -- Создаём новую сцену
 
--- Функции	
+-- Функции
 function MainMenuScene:create(event)
-	-- ПЕРЕМЕННЫЕ
-	local grpMainMenuScene = self.view; -- Группа
-	local imgBackgroundMenu = display.newImage(grpMainMenuScene, "img/menu/main_menu.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
-	local butEnterEng = display.newImage(grpMainMenuScene, "img/menu/eng.png", 688, 340 ); -- Кнопка переключение на английский
-	local butEnterRus = display.newImage(grpMainMenuScene, "img/menu/rus.png", 688, 425 ); -- Кнопка переключение на русский
-	local butVk = display.newImage(grpMainMenuScene, "img/menu/vk.png", 47, 645 ); -- Кнопка перехода в группу ВК
-	local butNewGame = display.newText(grpMainMenuScene, "", 1003, 498, "font/AA-Futured", 45); -- Кнопка "Начать игру"
-	local butCredits = display.newText(grpMainMenuScene, "", 1000, 614, "font/AA-Futured", 45); -- Кнопка "Титры"
-	local urlLogo = "img/menu/logo_"; -- LOGO
- 	local imgLogoMenu =  movieclip.newAnim{urlLogo.."rus.png",  -- Лого Rus
-										urlLogo.."eng.png"}; -- Лого Eng
-	local urlSound = "img/menu/sound_"; -- Sound
- 	local butSoundMenu =  movieclip.newAnim{urlSound.."on.png",  -- Звук включен
-										urlSound.."off.png"}; -- Звук выключен
-	local arrQuotations = {"","","","","","","","","","",""}; -- Цитаты
+    -- ПЕРЕМЕННЫЕ
+    local grpMainMenuScene = self.view; -- Группа
+    local imgBackgroundMenu = display.newImage(grpMainMenuScene, "img/menu/main_menu.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
+    local butEnterEng = display.newImage(grpMainMenuScene, "img/menu/eng.png", 688, 340 ); -- Кнопка переключение на английский
+    local butEnterRus = display.newImage(grpMainMenuScene, "img/menu/rus.png", 688, 425 ); -- Кнопка переключение на русский
+    local butVk = display.newImage(grpMainMenuScene, "img/menu/vk.png", 47, 645 ); -- Кнопка перехода в группу ВК
+    local butNewGame = display.newText(grpMainMenuScene, "", 1003, 498, "font/AA-Futured", 45); -- Кнопка "Начать игру"
+    local butCredits = display.newText(grpMainMenuScene, "", 1000, 614, "font/AA-Futured", 45); -- Кнопка "Титры"
+    local urlLogo = "img/menu/logo_"; -- LOGO
+    local imgLogoMenu =  movieclip.newAnim{urlLogo.."rus.png",  -- Лого Rus
+                                        urlLogo.."eng.png"}; -- Лого Eng
+    local urlSound = "img/menu/sound_"; -- Sound
+    local butSoundMenu =  movieclip.newAnim{urlSound.."on.png",  -- Звук включен
+                                        urlSound.."off.png"}; -- Звук выключен
+    local arrQuotations = {"","","","","","","","","","",""}; -- Цитаты
 
     -- ПАРАМЕТРЫ/ТЕКСТ/ПЕРЕХОД
     local optQuotations = {
@@ -56,14 +56,14 @@ function MainMenuScene:create(event)
         end
     end
 
-	-- Музыка в меню
-	local function funcPlayMusicToMenu()
-		snd:play("main_menu");
-		soundOnGame = true;
-		butSoundMenu:stopAtFrame(1);
-		butSoundMenu.x = 47;
-		butSoundMenu.y = 550;
-	end
+    -- Музыка в меню
+    local function funcPlayMusicToMenu()
+        snd:play("main_menu");
+        globalConfig.soundOnGame = true;
+        butSoundMenu:stopAtFrame(1);
+        butSoundMenu.x = 47;
+        butSoundMenu.y = 550;
+    end
 
     -- Функции нажатий
     local function funcEnterEng(event)
@@ -88,13 +88,13 @@ function MainMenuScene:create(event)
 
     local function funcChangeSound(event)
         if event.phase == "began" then
-            if soundOnGame == true then
+            if globalConfig.soundOnGame == true then
                 media.stopSound();
-                soundOnGame = false;
+                globalConfig.soundOnGame = false;
                 butSoundMenu:stopAtFrame(2);
-            elseif soundOnGame == false then
+            elseif globalConfig.soundOnGame == false then
                 media.playSound("snd/menu.mp3");
-                soundOnGame = true;
+                globalConfig.soundOnGame = true;
                 butSoundMenu:stopAtFrame(1);
             end
         end
