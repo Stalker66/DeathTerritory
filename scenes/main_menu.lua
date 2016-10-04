@@ -7,7 +7,7 @@
 -- СЦЕНЫ
 local MainMenuScene = composer.newScene(); -- Создаём новую сцену
 
--- Функции  
+-- Функции
 function MainMenuScene:create(event)
     -- ПЕРЕМЕННЫЕ
     local grpMainMenuScene = self.view; -- Группа
