@@ -26,7 +26,7 @@ end
 --Toggle diary module
 local function toggleDiary(state)
 	Diary.diaryState = state;
-	Diary.images.diaryIcon.isVisible = Diary.diaryState;
+	Diary.images.diaryIcon.isVisible = not Diary.diaryState;
 	Diary.diaryState = Diary.diaryState;
 	Diary.images.diary.isVisible = Diary.diaryState;
 	Diary.images.menu.isVisible = Diary.diaryState;
