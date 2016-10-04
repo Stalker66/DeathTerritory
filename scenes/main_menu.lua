@@ -59,7 +59,7 @@ function MainMenuScene:create(event)
 	-- Музыка в меню
 	local function funcPlayMusicToMenu()
 		snd:play("main_menu");
-		soundOnGame = true;
+		globalConfig.soundOnGame = true;
 		butSoundMenu:stopAtFrame(1);
 		butSoundMenu.x = 47;
 		butSoundMenu.y = 550;
@@ -88,13 +88,13 @@ function MainMenuScene:create(event)
 
     local function funcChangeSound(event)
         if event.phase == "began" then
-            if soundOnGame == true then
+            if globalConfig.soundOnGame == true then
                 media.stopSound();
-                soundOnGame = false;
+                globalConfig.soundOnGame = false;
                 butSoundMenu:stopAtFrame(2);
-            elseif soundOnGame == false then
+            elseif globalConfig.soundOnGame == false then
                 media.playSound("snd/menu.mp3");
-                soundOnGame = true;
+                globalConfig.soundOnGame = true;
                 butSoundMenu:stopAtFrame(1);
             end
         end

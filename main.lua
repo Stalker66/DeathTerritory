@@ -20,10 +20,12 @@ diary = require('modules.diary'); -- Diary module
 -- Debug package
 _G.Debug = require('lib.debug');
 
--- Глобальные переменные
-language = "Rus"; --  Переменная содержит выбранный язык приложения
-soundOnGame = false; --  Переменная содержит параметры звука
-alpha = 0.01; -- Прозрачность кнопок в игре
+globalConfig = {
+	language = "Rus", --  Переменная содержит выбранный язык приложения
+	soundOnGame = false, --  Переменная содержит параметры звука
+	alpha = 0.01, -- Прозрачность кнопок в игре
+	openedWindow = false
+}
 
 -- ФУНКЦИИ
 -- Загружаем текст
@@ -50,7 +52,7 @@ function loadLocalization(language)
     end
 end
 
-loadLocalization(language); -- Подгрузка/Обновление файла локализации
+loadLocalization(globalConfig.language); -- Подгрузка/Обновление файла локализации
 
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
