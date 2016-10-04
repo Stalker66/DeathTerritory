@@ -7,10 +7,17 @@
 -- Подгрузка библиотек
 composer = require "composer"; -- Подгружаем библиотеку создания сцен
 widget = require("widget"); -- Подгружаем библиотеку виджетов
-movieclip = require("movieclip"); -- Подгружаем библиотеку мувиклипов
 json = require("json"); -- Подгружаем библиотеку для работы с форматом json
-tutorials = require("scenes.tutorials"); -- Подгружаем библиотеку обучения
-local composer = require "composer"; -- Подгружаем библиотеку создания сцен
+movieclip = require("modules.movieclip"); -- Подгружаем библиотеку мувиклипов
+-- by Stalker66
+tutorials = require("modules.tutorials"); -- Подгружаем библиотеку обучения
+dialogs = require("modules.dialogs"); -- Подгружаем библиотеку диалогов
+tmr = require("modules.timer"); -- Подгружаем библиотеку таймера
+snd = require("modules.sounds_play"); -- Подгружаем библиотеку звука
+inventory = require('modules.inventory'); -- Inventory module
+diary = require('modules.diary'); -- Diary module
+
+-- Debug package
 _G.Debug = require('lib.debug');
 
 -- Глобальные переменные
@@ -45,16 +52,14 @@ end
 
 loadLocalization(language); -- Подгрузка/Обновление файла локализации
 
-local inventory = require('modules.inventory');
-inventory:new();
-
-diary = require('modules.diary');
-diary:new();
-diary:toggleDiaryItem(1);
-diary:toggleDiaryItem(2);
-
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
+
+-- Init inventory
+inventory:new();
+-- Init diary
+diary:new();
+
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
 composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
 
