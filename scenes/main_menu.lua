@@ -45,11 +45,11 @@ function MainMenuScene:create(event)
         butCredits.text = localization.credits_text;
         arrQuotations = { localization.quotations_text_1, localization.quotations_text_2, localization.quotations_text_3, localization.quotations_text_4, localization.quotations_text_5, localization.quotations_text_6, localization.quotations_text_7, localization.quotations_text_8, localization.quotations_text_9, localization.quotations_text_10, localization.quotations_text_11 };
         txtQuotations.text = arrQuotations[math.random(#arrQuotations)];
-        if language == "Rus" then
+        if globalConfig.language == "Rus" then
             imgLogoMenu:stopAtFrame(1);
             imgLogoMenu.x = 997;
             imgLogoMenu.y = 385;
-        elseif language == "Eng" then
+        elseif globalConfig.language == "Eng" then
             imgLogoMenu:stopAtFrame(2);
             imgLogoMenu.x = 1005;
             imgLogoMenu.y = 385;
@@ -67,20 +67,20 @@ function MainMenuScene:create(event)
 
     -- Функции нажатий
     local function funcEnterEng(event)
-        if language == "Rus" then
+        if globalConfig.language == "Rus" then
             if event.phase == "began" then
-                language = "Eng";
-                loadLocalization(language);
+                globalConfig.language = "Eng";
+                loadLocalization(globalConfig.language);
                 funcChangeLanguage(language);
             end
         end
     end
 
     local function funcEnterRus(event)
-        if language == "Eng" then
+        if globalConfig.language == "Eng" then
             if event.phase == "began" then
-                language = "Rus";
-                loadLocalization(language);
+                globalConfig.language = "Rus";
+                loadLocalization(globalConfig.language);
                 funcChangeLanguage(language);
             end
         end
