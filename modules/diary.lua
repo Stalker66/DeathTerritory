@@ -51,6 +51,14 @@ local function gotoMainMenu()
 			Diary.images.menu.isVisible = false;
 			Diary.images.back.isVisible = false;
 
+			-- Dispatch event go to main menu
+			local eventData = {
+				name = 'gotoMainMenu',
+				diaryState = Diary.diaryState
+			}
+
+			Runtime:dispatchEvent(eventData);
+
 			composer.gotoScene('scenes.main_menu');
 		end
 	end
@@ -84,7 +92,7 @@ function Diary:setImages()
 	self.images.menu:addEventListener('tap', gotoMainMenu);
 
 	-- Back image
-	self.images.back = display.newImage('img/modules/diary/back.png');
+	self.images.back = display.newImage('img/modules/common/back.png');
 	self.images.back.width = self.images.menu.width;
 	self.images.back.height = self.images.menu.height;
 	self.images.back.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.back.contentWidth/2;

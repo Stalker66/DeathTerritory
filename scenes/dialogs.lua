@@ -76,7 +76,13 @@ function DialogsScene:create(event)
 end
 
 DialogsScene:addEventListener("create", DialogsScene); -- Создание сцены
+
 Runtime:addEventListener('toggleDiary', function()
     print('toggleDiary');
 end);
+
+Runtime:addEventListener('gotoMainMenu', function()
+    print('gotoMainMenu');
+end);
+
 return DialogsScene;
