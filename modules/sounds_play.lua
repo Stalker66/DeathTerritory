@@ -15,7 +15,7 @@ Sounds_Play = {
 	-- Others
 	timer = audio.loadSound( "snd/others/timer.wav" ),
 	wrote = audio.loadSound( "snd/others/wrote.mp3" ),
-	give = audio.loadSound( "snd/others/give.mp3" ),
+	give = audio.loadSound( "snd/others/give.mp3" )
 }
 
 Sounds_Play.metatable = {}
