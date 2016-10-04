@@ -89,6 +89,7 @@ function Diary:setImages()
 
 	-- Menu image
 	self.images.menu = display.newImage('img/modules/diary/menu.png');
+	self.images.menu:scale(0.7, 0.7);
 	self.images.menu.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.menu.contentWidth/2;
 	self.images.menu.y = 180;
 	self.images.menu.isVisible = false;
@@ -97,6 +98,7 @@ function Diary:setImages()
 
 	-- Back image
 	self.images.back = display.newImage('img/modules/common/back.png');
+	self.images.back:scale(0.7, 0.7);
 	self.images.back.width = self.images.menu.width;
 	self.images.back.height = self.images.menu.height;
 	self.images.back.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.back.contentWidth/2;

@@ -64,34 +64,41 @@ end
 
 -- Show dialog
 function Dialogs:showDialog(sayNpc,sayActor,nameNpc)
-	if(globalConfig.openedWindow == false) then
-		globalConfig.openedWindow = true;
-
-		if dialogOn == false then
-			Dialogs:createDialog();
-		end
-
-		if nameNpc == localization.lena_name_text then
-			self.imgFace:stopAtFrame(2);
-		end
-
-		self.sayNPC.text = sayNpc;
-	    self.sayACTOR.text = sayActor;
-	    self.nameNPC.text = nameNpc;
-	    self.imgFace:toBack();
+	if(globalConfig.openedWindow == true) then
+		return;
 	end
+	
+	if dialogOn == false then
+		Dialogs:createDialog();
+	end
+
+	if nameNpc == localization.lena_name_text then
+		self.imgFace:stopAtFrame(2);
+	end
+
+	self.sayNPC.text = sayNpc;
+    self.sayACTOR.text = sayActor;
+    self.nameNPC.text = nameNpc;
+    self.imgFace:toBack();
 end
 
 -- Remove dialog
 function Dialogs:removeDialog()
 	local function removeDialog( obj )
-		--globalConfig.openedWindow = false;
 		dialogOn = false;
 		display.remove(self.grpDialogs);
 		self.grpDialogs = nil;
 	end
 
 	transition.fadeOut( self.grpDialogs, { time=200, onComplete=removeDialog } );
+end
+
+function Dialogs:startDialogs()
+	globalConfig.openedWindow = true;
+end
+
+function Dialogs:endDialogs()
+	globalConfig.openedWindow = false;
 end
 
 return Dialogs;
