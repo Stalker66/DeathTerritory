@@ -12,7 +12,7 @@ function Location1Event1:create(event)
 	local grpLocation1Event1 = self.view; -- Группа
 	local imgBackgroundLoc1 = display.newImage(grpLocation1Event1, "img/location1.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 	local butLoc1Car = display.newRect( 419, 352, 600, 225 ); -- Машина
-		  butLoc1Car.alpha = alpha;
+		  butLoc1Car.alpha = globalConfig.alpha;
 	local imgCharacterLena = display.newImage(grpLocation1Event1, "img/lena.png", display.contentCenterX, 600 ); -- Лена
 
 	-- ФУНКЦИИ

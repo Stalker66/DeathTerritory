@@ -25,20 +25,24 @@ end
 
 --Toggle diary module
 local function toggleDiary()
-	Diary.images.diaryIcon.isVisible = Diary.diaryState;
-	Diary.diaryState = not Diary.diaryState;
-	Diary.images.diary.isVisible = Diary.diaryState;
-	Diary.images.menu.isVisible = Diary.diaryState;
-	Diary.images.back.isVisible = Diary.diaryState;
-	Diary:toggleDiaryTitle(Diary.diaryState);
-	Diary:toggleDiaryBody(false);
+	if(globalConfig.openedWindow == false) then
+		globalConfig.openedWindow = true;
+		
+		Diary.images.diaryIcon.isVisible = Diary.diaryState;
+		Diary.diaryState = not Diary.diaryState;
+		Diary.images.diary.isVisible = Diary.diaryState;
+		Diary.images.menu.isVisible = Diary.diaryState;
+		Diary.images.back.isVisible = Diary.diaryState;
+		Diary:toggleDiaryTitle(Diary.diaryState);
+		Diary:toggleDiaryBody(false);
 
-	local eventData = {
-		name = 'toggleDiary',
-		diaryState = Diary.diaryState
-	}
+		local eventData = {
+			name = 'toggleDiary',
+			diaryState = Diary.diaryState
+		}
 
-	Runtime:dispatchEvent(eventData);
+		Runtime:dispatchEvent(eventData);
+	end
 end
 
 -- Listener go to main menu

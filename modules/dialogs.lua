@@ -44,7 +44,7 @@ function Dialogs:createDialog()
 	};
 
 	self.butChangeDialog = display.newRect(self.grpDialogs, 640, 504, 645, 200 );
-	self.butChangeDialog.alpha = alpha;
+	self.butChangeDialog.alpha = globalConfig.alpha;
 	self.sayNPC = display.newText( self.optNPC );
 	self.sayNPC:setTextColor( 192/255, 255/255, 62/255 );
 	self.sayACTOR = display.newText( self.optActor );
@@ -64,18 +64,18 @@ end
 
 -- Show dialog
 function Dialogs:showDialog(sayNpc,sayActor,nameNpc)
-	if dialogOn == false then
-		Dialogs:createDialog();
-	end
+		if dialogOn == false then
+			Dialogs:changeOpenedWindow();
+		end
 
-	if nameNpc == localization.lena_name_text then
-		self.imgFace:stopAtFrame(2);
-	end
+		if nameNpc == localization.lena_name_text then
+			self.imgFace:stopAtFrame(2);
+		end
 
-	self.sayNPC.text = sayNpc;
-    self.sayACTOR.text = sayActor;
-    self.nameNPC.text = nameNpc;
-    self.imgFace:toBack();
+		self.sayNPC.text = sayNpc;
+	    self.sayACTOR.text = sayActor;
+	    self.nameNPC.text = nameNpc;
+	    self.imgFace:toBack();
 end
 
 -- Remove dialog
@@ -84,9 +84,17 @@ function Dialogs:removeDialog()
 		dialogOn = false;
 		display.remove(self.grpDialogs);
 		self.grpDialogs = nil;
+		globalConfig.openedWindow = false;
 	end
 
 	transition.fadeOut( self.grpDialogs, { time=200, onComplete=removeDialog } );
+end
+
+function Dialogs:changeOpenedWindow()
+	if globalConfig.openedWindow == false then
+		Dialogs:createDialog();
+		globalConfig.openedWindow = true;
+	end
 end
 
 return Dialogs;
