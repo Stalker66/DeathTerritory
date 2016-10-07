@@ -10,6 +10,7 @@ local Location1Event1 = composer.newScene(); -- Создаём новую сце
 function Location1Event1:create(event)
 	-- Init inventory
 	inventory:new();
+	inventory:showFindStuff('token');
 	-- Init diary
 	diary:new();
 	displayGroup:insert(2, diary:getDisplayGroup());
@@ -51,7 +52,6 @@ function Location1Event1:create(event)
 				dialogs:removeDialog(); -- Удалить диалог
 				tutorials:showArrow("touchTutorial",490,185,"vertical");
 				inventory:addStuff('map');
-				inventory:addStuff('token');
 				transition.to( imgCharacterLena, { time=800, x=1150, y=460, width=220, height=622, onComplete=funcEventOne } );
 			end	
 		end
