@@ -8,19 +8,17 @@
 local Location1Event1 = composer.newScene(); -- Создаём новую сцену
 
 function Location1Event1:create(event)
-	-- Init inventory
-	inventory:new();
-	inventory:showFindStuff('token');
-	-- Init diary
-	diary:new();
+	inventory:new(); -- Init inventory
+	diary:new(); -- Init diary
+	--displayGroup:insert(1, diary:getDisplayGroup());
 
 	-- ПЕРЕМЕННЫЕ
 	local grpLocation1Event1 = self.view; -- Группа
 	local imgBackgroundLoc1 = display.newImage(grpLocation1Event1, "img/location1.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 	local butLoc1Car = display.newRect( 419, 352, 600, 225 ); -- Машина
-		  butLoc1Car.alpha = globalConfig.alpha;
+		  butLoc1Car.alpha = 1;--globalConfig.alpha;
 	local imgCharacterLena = display.newImage(grpLocation1Event1, "img/lena.png", display.contentCenterX, 600 ); -- Лена
-
+	
 	-- ФУНКЦИИ
 	local function funcBeganCar( event )
 		if event.phase == "began" then
@@ -29,6 +27,8 @@ function Location1Event1:create(event)
 			composer.removeScene( "scenes.location1" );
 			composer.gotoScene( "scenes.location2", "fade", 100 );
 		end
+
+		return true;
 	end
 
 	local function funcEventOne( obj )
@@ -41,6 +41,7 @@ function Location1Event1:create(event)
 				dialogs:showDialog(localization.dialog1_say2_text,localization.dialog1_say3_text,localization.lena_name_text);
 				tutorials:removeArrow("dialogTutorial");
 			elseif dialogs.sayACTOR.text == localization.dialog1_say3_text then
+				inventory:addStuff('map');
 				dialogs:showDialog(localization.dialog1_say7_text,localization.dialog1_say4_text,localization.lena_name_text);
 			elseif dialogs.sayACTOR.text == localization.dialog1_say4_text then
 				dialogs:showDialog(localization.ellipsis_text,localization.dialog1_say5_text,localization.lena_name_text);
@@ -50,8 +51,8 @@ function Location1Event1:create(event)
 				dialogs.butChangeDialog:removeEventListener( "touch", funcDialogPhrase );
 				dialogs:removeDialog(); -- Удалить диалог
 				tutorials:showArrow("touchTutorial",490,185,"vertical");
-				inventory:addStuff('map');
 				transition.to( imgCharacterLena, { time=800, x=1150, y=460, width=220, height=622, onComplete=funcEventOne } );
+				displayGroup:toFront( );
 			end	
 		end
 	end
