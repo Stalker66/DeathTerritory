@@ -4,7 +4,6 @@
 -- Выпадко Владислав
 -----------------------------------------------------------------------------------------
 Tutorials = {
-	displayGroup = display.newGroup()
 }
 
 Tutorials.metatable = {}
@@ -38,7 +37,6 @@ function Tutorials:showArrow(name,x,y,rotation)
 	self.name.alpha = 0;
 	self.name.x = x;
 	self.name.y = y;
-	self.displayGroup:insert(1, self.name);
 	transition.fadeIn(self.name, {time = 1000});
 	Tutorials:animateArrow(rotation);
 end
@@ -47,11 +45,6 @@ end
 function Tutorials:removeArrow(name)
 	self.name:removeSelf();
 	transition.cancel();
-end
-
--- Get Tutorials display group
-function Tutorials:getDisplayGroup()
-	return self.displayGroup;
 end
 
 return Tutorials;

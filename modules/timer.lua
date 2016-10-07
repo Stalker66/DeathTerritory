@@ -18,7 +18,7 @@ function Timer:showTimer(func)
 	self.timer.alpha = 0;
 	self.hand.alpha = 0;
 	self.center_clock.alpha = 0;
-	snd:play("timer");
+	snd:play("timer","snd1");
 	transition.fadeIn(self.hand, {time = 1000});
 	transition.fadeIn(self.center_clock, {time = 1000});
 	transition.fadeIn(self.timer, {time = 1000});
@@ -27,6 +27,7 @@ function Timer:showTimer(func)
 			transition.fadeOut(self.hand, {time = 1000});
 			transition.fadeOut(self.center_clock, {time = 1000, onComplete=func});
 			transition.fadeOut(self.timer, {time = 1000});
+			snd:stop("timer","snd1");
 		end
 		transition.to( self.hand, { time=6500, rotation=402, onComplete=endAnim } );
 		transition.to( self.center_clock, { time=6500, rotation=-180} );

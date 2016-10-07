@@ -8,12 +8,9 @@
 local Location1Event1 = composer.newScene(); -- Создаём новую сцену
 
 function Location1Event1:create(event)
-	-- Init inventory
-	inventory:new();
-	inventory:showFindStuff('token');
-	-- Init diary
-	diary:new();
-	displayGroup:insert(2, diary:getDisplayGroup());
+	inventory:new(); -- Init inventory
+	diary:new(); -- Init diary
+	displayGroup:insert(1, diary:getDisplayGroup());
 
 	-- ПЕРЕМЕННЫЕ
 	local grpLocation1Event1 = self.view; -- Группа
@@ -42,6 +39,7 @@ function Location1Event1:create(event)
 				dialogs:showDialog(localization.dialog1_say2_text,localization.dialog1_say3_text,localization.lena_name_text);
 				tutorials:removeArrow("dialogTutorial");
 			elseif dialogs.sayACTOR.text == localization.dialog1_say3_text then
+				inventory:addStuff('map');
 				dialogs:showDialog(localization.dialog1_say7_text,localization.dialog1_say4_text,localization.lena_name_text);
 			elseif dialogs.sayACTOR.text == localization.dialog1_say4_text then
 				dialogs:showDialog(localization.ellipsis_text,localization.dialog1_say5_text,localization.lena_name_text);
@@ -51,7 +49,6 @@ function Location1Event1:create(event)
 				dialogs.butChangeDialog:removeEventListener( "touch", funcDialogPhrase );
 				dialogs:removeDialog(); -- Удалить диалог
 				tutorials:showArrow("touchTutorial",490,185,"vertical");
-				inventory:addStuff('map');
 				transition.to( imgCharacterLena, { time=800, x=1150, y=460, width=220, height=622, onComplete=funcEventOne } );
 			end	
 		end
