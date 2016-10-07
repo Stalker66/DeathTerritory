@@ -31,14 +31,14 @@ end
 -- Set inventory stuff images
 function Inventory:setImages()
 	-- Background 
-	self.stuffs.background = display.newImage( 'img/modules/inventory/cels.png', 0, display.contentCenterY);
+	self.stuffs.background = display.newImage( 'img/inventory/cels.png', 0, display.contentCenterY);
 	self.stuffs.background.x = -self.stuffs.background.width/2;
 	transition.to(self.stuffs.background, {
 		time = 1000,
 		x = self.stuffs.background.width/2
 	});
 	-- Map
-	self.stuffs.map = display.newImage('img/modules/inventory/map.png', 0, display.contentCenterY);
+	self.stuffs.map = display.newImage('img/inventory/map.png', 0, display.contentCenterY);
 	self.stuffs.map:scale(0.9, 0.9);
 	self.stuffs.map.x = self.stuffs.map.width/2 + 20;
 	self.stuffs.map.y = self.stuffs.map.y + 108;
@@ -46,11 +46,11 @@ function Inventory:setImages()
 	-- Review
 	self.stuffs.map.name = 'map';
 	self.stuffs.map:addEventListener('tap', showStuff);
-	self.stuffs.review.map = display.newImage('img/modules/inventory/review/map.png', display.contentCenterX, display.contentCenterY);
+	self.stuffs.review.map = display.newImage('img/inventory/review/map.png', display.contentCenterX, display.contentCenterY);
 	self.stuffs.review.map.isVisible = false;
 
 	-- Token
-	self.stuffs.token = display.newImage('img/modules/inventory/token.png', 0, display.contentCenterY);
+	self.stuffs.token = display.newImage('img/inventory/token.png', 0, display.contentCenterY);
 	self.stuffs.token:scale(0.5, 0.5);
 	self.stuffs.token.x = self.stuffs.token.width/2 - 13;
 	self.stuffs.token.y = self.stuffs.token.y - 3;
@@ -58,11 +58,11 @@ function Inventory:setImages()
 	-- Review
 	self.stuffs.token.name = 'token';
 	self.stuffs.token:addEventListener('tap', showStuff);
-	self.stuffs.review.token = display.newImage('img/modules/inventory/review/token.png', display.contentCenterX, display.contentCenterY);
+	self.stuffs.review.token = display.newImage('img/inventory/review/token.png', display.contentCenterX, display.contentCenterY);
 	self.stuffs.review.token.isVisible = false;
 
 	-- Back image
-	self.images.back = display.newImage('img/modules/common/back.png');
+	self.images.back = display.newImage('img/common/back.png');
 	self.images.back.isVisible = false;
 	self.images.back:addEventListener('tap', closeStuff);
 end
@@ -70,7 +70,7 @@ end
 -- Add find stuffs
 function Inventory:setFindStuffs()
 	-- Map
-	self.stuffs.find.token = display.newImage('img/modules/inventory/review/token.png', 0, display.contentCenterY);
+	self.stuffs.find.token = display.newImage('img/inventory/review/token.png', 0, display.contentCenterY);
 	self.stuffs.find.token:scale(0.2, 0.2);
 	self.stuffs.find.token.x = display.contentWidth - 100;
 	self.stuffs.find.token.y = display.contentHeight - 100;

@@ -87,7 +87,7 @@ end
 
 function Diary:setImages()
 	-- Diary icon
-	self.images.diaryIcon = display.newImage('img/modules/diary/diary-icon.png');
+	self.images.diaryIcon = display.newImage('img/diary/diary-icon.png');
 	self.images.diaryIcon:scale(0.7, 0.7);
 	self.images.diaryIcon.x = display.contentWidth + self.images.diaryIcon.contentWidth/2;
 	self.images.diaryIcon.y = 100;
@@ -99,12 +99,12 @@ function Diary:setImages()
 	self.displayGroup:insert(1, self.images.diaryIcon);
 
 	-- Diary image
-	self.images.diary = display.newImage('img/modules/diary/diary.png', display.contentCenterX, display.contentCenterY);
+	self.images.diary = display.newImage('img/diary/diary.png', display.contentCenterX, display.contentCenterY);
 	self.images.diary.isVisible = false;
 	self.displayGroup:insert(2, self.images.diary);
 
 	-- Menu image
-	self.images.menu = display.newImage('img/modules/diary/menu.png');
+	self.images.menu = display.newImage('img/diary/menu.png');
 	self.images.menu:scale(0.7, 0.7);
 	self.images.menu.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.menu.contentWidth/2;
 	self.images.menu.y = 180;
@@ -113,7 +113,7 @@ function Diary:setImages()
 	self.images.menu:addEventListener('tap', gotoMainMenu);
 
 	-- Back image
-	self.images.back = display.newImage('img/modules/common/back.png');
+	self.images.back = display.newImage('img/common/back.png');
 	self.images.back:scale(0.7, 0.7);
 	self.images.back.width = self.images.menu.width;
 	self.images.back.height = self.images.menu.height;
