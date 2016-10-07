@@ -13,7 +13,6 @@ function Location1Event1:create(event)
 	inventory:showFindStuff('token');
 	-- Init diary
 	diary:new();
-	displayGroup:insert(2, diary:getDisplayGroup());
 
 	-- ПЕРЕМЕННЫЕ
 	local grpLocation1Event1 = self.view; -- Группа
