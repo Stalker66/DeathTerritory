@@ -1,3 +1,8 @@
+-----------------------------------------------------------------------------------------
+-- Диалоги
+-- diary.lua
+-- Станисла Пишевский
+-----------------------------------------------------------------------------------------
 local composer = require('composer');
 
 Diary = {
@@ -24,25 +29,36 @@ function Diary:new()
 end
 
 --Toggle diary module
-local function toggleDiary()
+local function toggleDiary(state)
+	Diary.diaryState = state;
+	--Diary.images.diaryIcon.isVisible = not Diary.diaryState;
+	Diary.diaryState = Diary.diaryState;
+	Diary.images.diary.isVisible = Diary.diaryState;
+	Diary.images.menu.isVisible = Diary.diaryState;
+	Diary.images.back.isVisible = Diary.diaryState;
+	Diary:toggleDiaryTitle(Diary.diaryState);
+	Diary:toggleDiaryBody(false);
+
+	local eventData = {
+		name = 'toggleDiary',
+		diaryState = Diary.diaryState
+	}
+
+	Runtime:dispatchEvent(eventData);
+end
+
+function openDiary()
 	if(globalConfig.openedWindow == false) then
 		globalConfig.openedWindow = true;
-		
-		Diary.images.diaryIcon.isVisible = Diary.diaryState;
-		Diary.diaryState = not Diary.diaryState;
-		Diary.images.diary.isVisible = Diary.diaryState;
-		Diary.images.menu.isVisible = Diary.diaryState;
-		Diary.images.back.isVisible = Diary.diaryState;
-		Diary:toggleDiaryTitle(Diary.diaryState);
-		Diary:toggleDiaryBody(false);
 
-		local eventData = {
-			name = 'toggleDiary',
-			diaryState = Diary.diaryState
-		}
-
-		Runtime:dispatchEvent(eventData);
+		toggleDiary(true);
 	end
+end
+
+function closeDiary()
+	globalConfig.openedWindow = false;
+
+	toggleDiary(false);
 end
 
 -- Listener go to main menu
@@ -75,7 +91,7 @@ function Diary:setImages()
 	self.images.diaryIcon:scale(0.7, 0.7);
 	self.images.diaryIcon.x = display.contentWidth + self.images.diaryIcon.contentWidth/2;
 	self.images.diaryIcon.y = 100;
-	self.images.diaryIcon:addEventListener('tap', toggleDiary);
+	self.images.diaryIcon:addEventListener('tap', openDiary);
 	transition.to(self.images.diaryIcon, {
 		time = 1000,
 		x = (display.contentWidth - self.images.diaryIcon.contentWidth/2)
@@ -89,6 +105,7 @@ function Diary:setImages()
 
 	-- Menu image
 	self.images.menu = display.newImage('img/modules/diary/menu.png');
+	self.images.menu:scale(0.7, 0.7);
 	self.images.menu.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.menu.contentWidth/2;
 	self.images.menu.y = 180;
 	self.images.menu.isVisible = false;
@@ -97,13 +114,14 @@ function Diary:setImages()
 
 	-- Back image
 	self.images.back = display.newImage('img/modules/common/back.png');
+	self.images.back:scale(0.7, 0.7);
 	self.images.back.width = self.images.menu.width;
 	self.images.back.height = self.images.menu.height;
 	self.images.back.x = display.contentWidth - (display.contentWidth - self.images.diary.contentWidth)/2 + self.images.back.contentWidth/2;
 	self.images.back.y = self.images.menu.y + self.images.menu.height + 20;
 	self.images.back.isVisible = false;
 	self.displayGroup:insert(4, self.images.back);
-	self.images.back:addEventListener('tap', toggleDiary);
+	self.images.back:addEventListener('tap', closeDiary);
 end
 
 -- Init diary text
