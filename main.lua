@@ -18,6 +18,7 @@ snd = require("modules.sounds_play"); -- Подгружаем библиотек
 inventory = require('modules.inventory'); -- Inventory module
 diary = require('modules.diary'); -- Diary module
 displayGroup = display.newGroup();
+displayGroup:insert(1, diary:getDisplayGroup());
 -- Debug package
 _G.Debug = require('lib.debug');
 
