@@ -16,7 +16,8 @@ Inventory = {
 
 	},
 	currentStuffs = {},
-	currentOpenStuff = nil
+	currentOpenStuff = nil,
+	displayGroup = display.newGroup()
 }
 
 Inventory.metatable = {}
@@ -33,21 +34,25 @@ function Inventory:setImages()
 	-- Background 
 	self.stuffs.background = display.newImage( 'img/inventory/cels.png', 0, display.contentCenterY);
 	self.stuffs.background.x = -self.stuffs.background.width/2;
+	self.displayGroup:insert(self.stuffs.background);
 	transition.to(self.stuffs.background, {
 		time = 1000,
 		x = self.stuffs.background.width/2
 	});
+
 	-- Map
 	self.stuffs.map = display.newImage('img/inventory/map.png', 0, display.contentCenterY);
 	self.stuffs.map:scale(0.9, 0.9);
 	self.stuffs.map.x = self.stuffs.map.width/2 + 20;
 	self.stuffs.map.y = self.stuffs.map.y + 108;
 	self.stuffs.map.alpha = 0;
+	self.displayGroup:insert(self.stuffs.map);
 	-- Review
 	self.stuffs.map.name = 'map';
-	self.stuffs.map:addEventListener('tap', showStuff);
+	self.stuffs.map:addEventListener('touch', showStuff);
 	self.stuffs.review.map = display.newImage('img/inventory/review/map.png', display.contentCenterX, display.contentCenterY);
 	self.stuffs.review.map.isVisible = false;
+	self.displayGroup:insert(self.stuffs.review.map);
 
 	-- Token
 	self.stuffs.token = display.newImage('img/inventory/token.png', 0, display.contentCenterY);
@@ -55,16 +60,39 @@ function Inventory:setImages()
 	self.stuffs.token.x = self.stuffs.token.width/2 - 13;
 	self.stuffs.token.y = self.stuffs.token.y - 3;
 	self.stuffs.token.alpha = 0;
+	self.displayGroup:insert(self.stuffs.token);
 	-- Review
 	self.stuffs.token.name = 'token';
-	self.stuffs.token:addEventListener('tap', showStuff);
+	self.stuffs.token:addEventListener('touch', showStuff);
 	self.stuffs.review.token = display.newImage('img/inventory/review/token.png', display.contentCenterX, display.contentCenterY);
 	self.stuffs.review.token.isVisible = false;
+	self.displayGroup:insert(self.stuffs.review.token);
+
+	-- Scheme
+	self.stuffs.scheme = display.newImage('img/inventory/scheme.png', 0, display.contentCenterY);
+	self.stuffs.scheme:scale(0.9, 0.9);
+	self.stuffs.scheme.x = self.stuffs.scheme.width/2 + 17;
+	self.stuffs.scheme.y = self.stuffs.scheme.y - 115;
+	self.stuffs.scheme.alpha = 0;
+	self.displayGroup:insert(self.stuffs.scheme);
+	-- Review
+	self.stuffs.scheme.name = 'scheme';
+	self.stuffs.scheme:addEventListener('touch', showStuff);
+	self.stuffs.review.scheme = display.newImage('img/inventory/review/scheme.png', display.contentCenterX, display.contentCenterY);
+	self.stuffs.review.scheme.isVisible = false;
+	self.displayGroup:insert(self.stuffs.review.scheme);
 
 	-- Back image
 	self.images.back = display.newImage('img/common/back.png');
 	self.images.back.isVisible = false;
-	self.images.back:addEventListener('tap', closeStuff);
+	self.images.back:addEventListener('touch', closeStuff);
+	self.displayGroup:insert(self.images.back);
+
+	-- Disable cross element click
+	for k, item in pairs(self.stuffs.review) do
+		item:addEventListener("touch", function() return true end)
+		item:addEventListener("tap", function() return true end)
+	end
 end
 
 -- Add find stuffs
@@ -79,12 +107,21 @@ function Inventory:setFindStuffs()
 	self.stuffs.find.token.delay = 1000;
 
 	for key, item in pairs(self.stuffs.find) do
-		item:addEventListener('tap', function()
+		item:addEventListener('touch', function(event)
+			if event.phase ~= "began" then
+				return true;
+			end
+
 			Inventory:addFindStuff(item.name, item.delay);
+
+			return true;
 		end);
+
+		item:addEventListener('tap', function() return true; end);
 	end
 end
 
+-- Set visible for find stuff at location
 function Inventory:showFindStuff(name)
 	self.stuffs.find[name].isVisible = true;
 end
@@ -130,8 +167,17 @@ function Inventory:closeCloseBtn()
 	self.images.back.isVisible = false;
 end
 
+-- Show stuff in center scene
 function showStuff(event)
-	closeStuff();
+	if event.phase ~= "began" then
+		return true;
+	end
+
+	if not Inventory:checkCanOpenWindow() then
+		return;
+	end
+
+	--closeStuff();
 	
 	local name = event.target.name;
 	Inventory.currentOpenStuff = event.target.name;
@@ -139,10 +185,17 @@ function showStuff(event)
 	Inventory.stuffs.review[name].isVisible = true;
 end
 
-function closeStuff()
+-- Close stuff
+function closeStuff(event)
+	if event.phase ~= "began" then
+		return true;
+	end
+
 	if(Inventory.currentOpenStuff ~= nil) then
 		Inventory:closeCloseBtn();
 		Inventory.stuffs.review[Inventory.currentOpenStuff].isVisible = false;
+
+		Inventory:checkCanOpenWindow(true);
 	end
 end
 
@@ -152,6 +205,33 @@ end
 
 function Inventory:getStuffs()
 	return self.stuffs;
+end
+
+-- Check opened window
+-- @closeWindow - true if need close current opened window
+-- @return boolean
+function Inventory:checkCanOpenWindow(closeWindow)
+	print(closeWindow)
+	closeWindow = closeWindow or false;
+
+	if(closeWindow == true) then
+		globalConfig.openedWindow = false;
+
+		return true
+	end
+
+	if(globalConfig.openedWindow == false) then
+		globalConfig.openedWindow = true;
+
+		return true;
+	else
+		return false
+	end
+end
+
+-- Get diary display group
+function Inventory:getDisplayGroup()
+	return self.displayGroup;
 end
 
 return Inventory;
