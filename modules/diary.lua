@@ -102,6 +102,9 @@ function Diary:setImages()
 	self.images.diary = display.newImage('img/diary/diary.png', display.contentCenterX, display.contentCenterY);
 	self.images.diary.isVisible = false;
 	self.displayGroup:insert(2, self.images.diary);
+	-- Prevent click cross above element
+	self.displayGroup:addEventListener("touch", function() return true end)
+	self.displayGroup:addEventListener("tap", function() return true end)
 
 	-- Menu image
 	self.images.menu = display.newImage('img/diary/menu.png');
