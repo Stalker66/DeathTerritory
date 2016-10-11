@@ -10,7 +10,6 @@ local Location1Event1 = composer.newScene(); -- Создаём новую сце
 function Location1Event1:create(event)
 	inventory:new(); -- Init inventory
 	diary:new(); -- Init diary
-	displayGroup:insert(1, diary:getDisplayGroup());
 
 	-- ПЕРЕМЕННЫЕ
 	local grpLocation1Event1 = self.view; -- Группа
@@ -18,7 +17,7 @@ function Location1Event1:create(event)
 	local butLoc1Car = display.newRect( 419, 352, 600, 225 ); -- Машина
 		  butLoc1Car.alpha = globalConfig.alpha;
 	local imgCharacterLena = display.newImage(grpLocation1Event1, "img/lena.png", display.contentCenterX, 600 ); -- Лена
-
+	
 	-- ФУНКЦИИ
 	local function funcBeganCar( event )
 		if event.phase == "began" then
@@ -27,6 +26,8 @@ function Location1Event1:create(event)
 			composer.removeScene( "scenes.location1" );
 			composer.gotoScene( "scenes.location2", "fade", 100 );
 		end
+
+		return true;
 	end
 
 	local function funcEventOne( obj )
@@ -50,6 +51,7 @@ function Location1Event1:create(event)
 				dialogs:removeDialog(); -- Удалить диалог
 				tutorials:showArrow("touchTutorial",490,185,"vertical");
 				transition.to( imgCharacterLena, { time=800, x=1150, y=460, width=220, height=622, onComplete=funcEventOne } );
+				displayGroup:toFront( );
 			end	
 		end
 	end

@@ -47,7 +47,11 @@ local function toggleDiary(state)
 	Runtime:dispatchEvent(eventData);
 end
 
-function openDiary()
+function openDiary(event)
+	if event.phase ~= "began" then
+		return true;
+	end
+
 	if(globalConfig.openedWindow == false) then
 		globalConfig.openedWindow = true;
 
@@ -55,14 +59,22 @@ function openDiary()
 	end
 end
 
-function closeDiary()
+function closeDiary(event)
+	if event.phase ~= "began" then
+		return true;
+	end
+
 	globalConfig.openedWindow = false;
 
 	toggleDiary(false);
 end
 
 -- Listener go to main menu
-local function gotoMainMenu()
+local function gotoMainMenu(event)
+	if event.phase ~= "began" then
+		return true;
+	end
+
 	local function gotoMainMenu_(event)
 		if(event.index == 2) then
 			Diary:toggleDiaryTitle(false);
@@ -91,7 +103,7 @@ function Diary:setImages()
 	self.images.diaryIcon:scale(0.7, 0.7);
 	self.images.diaryIcon.x = display.contentWidth + self.images.diaryIcon.contentWidth/2;
 	self.images.diaryIcon.y = 100;
-	self.images.diaryIcon:addEventListener('tap', openDiary);
+	self.images.diaryIcon:addEventListener('touch', openDiary);
 	transition.to(self.images.diaryIcon, {
 		time = 1000,
 		x = (display.contentWidth - self.images.diaryIcon.contentWidth/2)
@@ -113,7 +125,7 @@ function Diary:setImages()
 	self.images.menu.y = 180;
 	self.images.menu.isVisible = false;
 	self.displayGroup:insert(3, self.images.menu);
-	self.images.menu:addEventListener('tap', gotoMainMenu);
+	self.images.menu:addEventListener('touch', gotoMainMenu);
 
 	-- Back image
 	self.images.back = display.newImage('img/common/back.png');
@@ -124,7 +136,7 @@ function Diary:setImages()
 	self.images.back.y = self.images.menu.y + self.images.menu.height + 20;
 	self.images.back.isVisible = false;
 	self.displayGroup:insert(4, self.images.back);
-	self.images.back:addEventListener('tap', closeDiary);
+	self.images.back:addEventListener('touch', closeDiary);
 end
 
 -- Init diary text
@@ -193,7 +205,11 @@ function Diary:addDiaryText(title, body, options)
 	self.text.pages[last].title.active = false;
 	self.text.pages[last].title.activeColor = options.title.activeColor;
 	self.displayGroup:insert(5, self.text.pages[last].title);
-	self.text.pages[last].title:addEventListener('tap', function()
+	self.text.pages[last].title:addEventListener('touch', function(event)
+		if event.phase ~= "began" then
+			return true;
+		end
+		
 		if(self.text.pages[last].title.active) then
 			Diary:toggleDiaryBody(false);
 			self.text.pages[last].body.isVisible = true;

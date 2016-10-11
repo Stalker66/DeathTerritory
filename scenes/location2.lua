@@ -31,6 +31,7 @@ function Location2Event1:create(event)
 	-- АКТИВАТОРЫ/СЛУШАТЕЛИ
 	tutorials:showArrow("trunkTutorial",500,250,"vertical");
 	butLoc2Trunk:addEventListener( "touch", funcBeganTrunk );
+	displayGroup:toFront( );
 end
 
 Location2Event1:addEventListener("create", Location2Event1); -- Создание сцены

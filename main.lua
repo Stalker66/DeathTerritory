@@ -17,7 +17,12 @@ snd = require("modules.sounds_play"); -- Подгружаем библиотек
 -- by Bamiza
 inventory = require('modules.inventory'); -- Inventory module
 diary = require('modules.diary'); -- Diary module
+zombieAnimations = require('modules.zombie_animations');
+zombieAnimations:new();
 displayGroup = display.newGroup();
+displayGroup:insert(diary:getDisplayGroup());
+displayGroup:insert(inventory:getDisplayGroup());
+displayGroup:insert(zombieAnimations:getDisplayGroup());
 -- Debug package
 _G.Debug = require('lib.debug');
 
@@ -58,7 +63,7 @@ loadLocalization(globalConfig.language); -- Подгрузка/Обновлен�
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene( "scenes.location1", "fade", 500 ); -- Тестовый переход на локацию 1
+composer.gotoScene( "scenes.location_farm_outside", "fade", 500 ); -- Тестовый переход на локацию 1
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);
