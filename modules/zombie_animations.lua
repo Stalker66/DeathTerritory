@@ -19,12 +19,26 @@ function ZombieAnimations:new()
 	ZombieAnimations:setImagesDeadMenu();
 end
 
+-- Hide all elements
 function ZombieAnimations:showDeadMenu()
 	self.images.deadMenu.background.isVisible = true;
 	self.images.deadMenu.exit.isVisible = true;
 	self.images.deadMenu.tryAdain.isVisible = true;
+
+	-- Hide all current visible stuffs
+	Runtime:dispatchEvent({
+		name = 'KillPlayer'
+	});
 end
 
+-- Hide all items in display object group
+function ZombieAnimations:hideAllDisplayObjects()
+	for i = 1, self.displayGroup.numChildren do
+		self.displayGroup[i].isVisible = false;
+	end
+end
+
+-- Init images for dead menu
 function ZombieAnimations:setImagesDeadMenu()
 	self.images.deadMenu = {};
 
@@ -32,6 +46,8 @@ function ZombieAnimations:setImagesDeadMenu()
 	self.images.deadMenu.background = display.newRect(display.contentCenterX, display.contentCenterY, display.contentWidth, display.contentHeight);
 	self.images.deadMenu.background:setFillColor(0.6522, 0.08, 0.08, 0.75);
 	self.images.deadMenu.background.isVisible = false;
+	self.images.deadMenu.background:addEventListener('tap', function() return true; end);
+	self.images.deadMenu.background:addEventListener('touch', function() return true; end);
 	self.displayGroup:insert(self.images.deadMenu.background);
 
 	-- Exit
@@ -60,8 +76,7 @@ function ZombieAnimations:setImagesDeadMenu()
 	self.displayGroup:insert(self.images.deadMenu.tryAdain);
 	self.images.deadMenu.tryAdain:addEventListener('touch', function(event)
 		if event.phase == 'began' then
-			-- @todo remove after go to nex scene
-			self.displayGroup.isVisible = false;
+			ZombieAnimations:hideAllDisplayObjects();
 
 			composer.gotoScene('scenes.location_farm_outside');
 			composer.removeScene( "scenes.location_farm_inside" );
@@ -69,6 +84,7 @@ function ZombieAnimations:setImagesDeadMenu()
 	end);
 end
 
+-- Init images for zombies
 function ZombieAnimations:setImages()
 	-- Farm zombie idle
 	self.images.farm = {};
@@ -94,7 +110,34 @@ function ZombieAnimations:setImages()
 			
 			transition.cancel(self.images.farm.idle);
 			self.images.farm.idle.isVisible = false;
+
+			-- Throw weapon
+			weapon:throw('wrench');
+
+			--	Add animation kill zombie
 			self.images.farm.dead.isVisible = true;
+			local deadTime = 500;
+
+			transition.to(self.images.farm.dead.path, {
+				time = deadTime,
+				x1 = 100,
+				y1 = 300,
+				x4 = -100,
+				y4 = 300
+			});
+
+			transition.to(self.images.farm.dead, {
+				time = deadTime,
+				y = self.images.farm.dead.y + 150, 
+				onComplete = function()
+					transition.fadeOut(self.images.farm.dead, {
+						time = 10,
+						onComplete = function()
+							self.images.farm.dead.isVisible = false;
+						end
+					});
+				end
+			});
 		elseif self.images.farm.goal.kill == false then
 			self.images.farm.goal.clickToKill = self.images.farm.goal.clickToKill + 1;
 		end
@@ -117,13 +160,14 @@ function ZombieAnimations:setImages()
 	-- Basement sprit
 	self.images.basement = {}
 	self.images.basement.spirit = display.newImage('img/zombie_animations/basement/spririt.png');
-	self.images.basement.spirit.x = display.contentCenterX + 30;
-	self.images.basement.spirit.y = self.images.basement.spirit.height/2;
+	self.images.basement.spirit.x = 450;--display.contentCenterX + 30;
+	self.images.basement.spirit.y = 320;--self.images.basement.spirit.height/2;
 	self.images.basement.spirit.alpha = 0;
 	self.images.basement.spirit.isVisible = true;
 	self.displayGroup:insert(self.images.basement.spirit);
 end
 
+-- Start animation by nam
 function ZombieAnimations:start(animationName, options)
 	if options == nil then
 		options = {};
@@ -164,9 +208,11 @@ function ZombieAnimations:start(animationName, options)
 			listener = attack
 		});
 	elseif animationName == 'spirit' then
-		local animationTime = 3500;
+		local animationTime = 2000;
 		local fadeInTime = 300;
 		local fadeOutTime = 500;
+		local fadeInOutFastTime = 50;
+		local fadeInOutTimeDelay = 300;
 
 		self.images.basement.spirit.isVisible = true;
 
@@ -174,6 +220,48 @@ function ZombieAnimations:start(animationName, options)
 			time = fadeInTime,
 			alpha = 1
 		});
+
+		timer.performWithDelay(350, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 0
+			});
+		end);
+
+		timer.performWithDelay(410, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 1
+			});
+		end);
+
+		timer.performWithDelay(470, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 0
+			});
+		end);
+
+		timer.performWithDelay(450, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 1
+			});
+		end);
+
+		timer.performWithDelay(900, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 0
+			});
+		end);
+
+		timer.performWithDelay(1300, function()
+			transition.to(self.images.basement.spirit, {
+				time = fadeInOutFastTime,
+				alpha = 1
+			});
+		end);
 
 		timer.performWithDelay(animationTime - fadeOutTime, function()
 			transition.to(self.images.basement.spirit, {
@@ -195,6 +283,7 @@ function ZombieAnimations:start(animationName, options)
 	end
 end
 
+-- Shake Left->Right animation for zombie
 function ZombieAnimations:shakeLeftToRigth(element, options)
 	if options.repeats <= 0 then
 		if options.listener ~= nil then

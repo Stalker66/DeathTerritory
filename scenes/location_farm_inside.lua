@@ -12,6 +12,10 @@ function LocationFarmOutsideEvent:create(event)
 	local grpLocationFarmOutsideEvent = self.view; -- Группа
 	local imgBackgroundLoc1 = display.newImage(grpLocationFarmOutsideEvent, "img/location_farm_inside/background.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
+	-- Show key stuff
+	foundStuff:showStuff('farmKey');
+
+	-- Start zombie attack
 	zombieAnimations:start('farm');
 end
 

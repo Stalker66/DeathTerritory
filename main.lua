@@ -19,10 +19,16 @@ inventory = require('modules.inventory'); -- Inventory module
 diary = require('modules.diary'); -- Diary module
 zombieAnimations = require('modules.zombie_animations');
 zombieAnimations:new();
+weapon = require('modules.weapon');
+weapon:new();
+foundStuff = require('modules.foundStuff');
+foundStuff:new();
 displayGroup = display.newGroup();
 displayGroup:insert(diary:getDisplayGroup());
 displayGroup:insert(inventory:getDisplayGroup());
 displayGroup:insert(zombieAnimations:getDisplayGroup());
+displayGroup:insert(weapon:getDisplayGroup());
+displayGroup:insert(foundStuff:getDisplayGroup());
 -- Debug package
 _G.Debug = require('lib.debug');
 

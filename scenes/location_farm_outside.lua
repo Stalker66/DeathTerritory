@@ -20,13 +20,31 @@ function LocationFarmOutsideEvent:create(event)
 	door.alpha = globalConfig.alpha;
 	door:addEventListener('touch', function(event)
 		if event.phase == 'began' then
-			-- @todo fix remove object after go to nex scene
+			if not weapon:getAlreadyGet('wrench') then
+				return;
+			end
+
 			door.isVisible = false;
 
 			composer.gotoScene('scenes.location_farm_inside');
 			composer.removeScene( "scenes.location_farm_outside" );
 		end
 	end);
+
+	local car = display.newRect(0, 0, 200, 110);
+	car.x = display.contentCenterX + car.width + 130;
+	car.y = display.contentCenterY + 210;
+	car.alpha = globalConfig.alpha;
+	car:addEventListener('touch', function(event)
+		if event.phase == 'began' then
+			tmr:showTimer(function()
+				weapon:pickUp('wrench');
+			end);
+		end
+	end);
+
+	--	Pick up wrench weapon
+	--weapon:pickUp('wrench');
 end
 
 LocationFarmOutsideEvent:addEventListener("create", LocationFarmOutsideEvent); -- Создание сцены
