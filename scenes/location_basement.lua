@@ -16,11 +16,11 @@ function LocationBasementEvent:create(event)
 	local grpLocationBasementEvent = self.view; -- Группа
 	local imgBackgroundLoc1 = display.newImage(grpLocationBasementEvent, "img/location_basement/background.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
-	-- zombieAnimations:start('basement', {
-	-- 	onComplete = function()
-	-- 		globalConfig.canGo = true;
-	-- 	end
-	-- });
+	zombieAnimations:start('basement', {
+		onComplete = function()
+			globalConfig.canGo = true;
+		end
+	});
 
 	local upDoor = display.newRect(0, 0, 185, 450);
 	upDoor.x = upDoor.width/2 + 430;

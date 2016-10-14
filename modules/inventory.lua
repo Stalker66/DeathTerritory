@@ -67,8 +67,8 @@ function Inventory:setImages()
 
 	-- Scheme
 	self.stuffs.scheme = display.newImage('img/inventory/scheme.png', 0, display.contentCenterY);
-	self.stuffs.scheme:scale(0.9, 0.9);
-	self.stuffs.scheme.x = self.stuffs.scheme.width/2 + 17;
+	self.stuffs.scheme:scale(0.11, 0.11);
+	self.stuffs.scheme.x = self.stuffs.scheme.contentWidth/2 + 19;
 	self.stuffs.scheme.y = self.stuffs.scheme.y - 115;
 	self.stuffs.scheme.alpha = 0;
 	self.displayGroup:insert(self.stuffs.scheme);
@@ -106,7 +106,7 @@ function Inventory:hideInventoryIcon()
 	});
 end
 
--- Add find stuffs
+-- Add find stuffs on map and set its unvisible
 function Inventory:setFindStuffs()
 	-- Map
 	self.stuffs.find.token = display.newImage('img/inventory/review/token.png', 0, display.contentCenterY);
@@ -116,6 +116,15 @@ function Inventory:setFindStuffs()
 	self.stuffs.find.token.isVisible = false;
 	self.stuffs.find.token.name = 'token';
 	self.stuffs.find.token.delay = 1000;
+
+	self.stuffs.find.scheme = display.newImage('img/inventory/scheme.png');
+	self.stuffs.find.scheme:scale(0.1, 0.1);
+	self.stuffs.find.scheme.x = display.contentWidth - 105;
+	self.stuffs.find.scheme.y = display.contentHeight - 165;
+	self.stuffs.find.scheme.rotation = 4;
+	self.stuffs.find.scheme.isVisible = false;
+	self.stuffs.find.scheme.name = 'scheme';
+	self.stuffs.find.scheme.delay = 1000;
 
 	for key, item in pairs(self.stuffs.find) do
 		item:addEventListener('touch', function(event)

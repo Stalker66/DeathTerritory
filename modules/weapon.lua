@@ -195,6 +195,10 @@ function Weapon:resetWeapon(name)
 	end
 end
 
+function Weapon:toggleVisble(name, visible)
+	self.images[name].isVisible = visible;
+end
+
 function Weapon:getAlreadyGet(name)
 	return self.images[name].alreadyGet;
 end

@@ -15,15 +15,18 @@ function LocationTunelDoorEvent:create(event)
 	local imgBackgroundLoc1 = display.newImage(grpLocationTunelDoorEvent, "img/location_tunel_door/background.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
 
 	local codeGroup = display.newGroup();
+	codeGroup.isVisible = false;
+	codeGroup:toFront( );
 	grpLocationTunelDoorEvent:insert(codeGroup);
 	local code = display.newImage(grpLocationTunelDoorEvent, "img/location_tunel_door/code.png", display.contentCenterX, display.contentCenterY);
-	code.isVisible = true;
 	codeGroup:insert(code);
 	local back = display.newImage(grpLocationTunelDoorEvent, "img/common/back.png", 0, 0);
 	back.x = code.x + code.width/2 + back.width /2;
 	back.y = code.y + code.height/2 - back.height/2;
 	back:addEventListener('tap', function() return true; end);
 	back:addEventListener('touch', function()
+		weapon:toggleVisble('basementAx', true);
+		
 		codeGroup.isVisible = false;
 	end);
 	codeGroup:insert(back);
@@ -35,6 +38,7 @@ function LocationTunelDoorEvent:create(event)
 	grpLocationTunelDoorEvent:insert(keyboard);
 	keyboard:addEventListener('tap', function() return true; end);
 	keyboard:addEventListener('touch', function()
+		weapon:toggleVisble('basementAx', false);
 		codeGroup:toFront();
 
 		codeGroup.isVisible = true;
