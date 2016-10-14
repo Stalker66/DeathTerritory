@@ -26,6 +26,7 @@ Diary.metatable.__index = Diary;
 function Diary:new()
 	Diary:setImages();
 	Diary:initText();
+	Diary:showDiaryIcon();
 end
 
 --Toggle diary module
@@ -69,6 +70,10 @@ function closeDiary(event)
 	toggleDiary(false);
 end
 
+function Diary:hideDiary()
+	toggleDiary(false);
+end
+
 -- Listener go to main menu
 local function gotoMainMenu(event)
 	if event.phase ~= "began" then
@@ -104,12 +109,8 @@ function Diary:setImages()
 	self.images.diaryIcon.x = display.contentWidth + self.images.diaryIcon.contentWidth/2;
 	self.images.diaryIcon.y = 100;
 	self.images.diaryIcon:addEventListener('touch', openDiary);
-	transition.to(self.images.diaryIcon, {
-		time = 1000,
-		x = (display.contentWidth - self.images.diaryIcon.contentWidth/2)
-	});
 	self.displayGroup:insert(1, self.images.diaryIcon);
-
+	
 	-- Diary image
 	self.images.diary = display.newImage('img/diary/diary.png', display.contentCenterX, display.contentCenterY);
 	self.images.diary.isVisible = false;
@@ -137,6 +138,21 @@ function Diary:setImages()
 	self.images.back.isVisible = false;
 	self.displayGroup:insert(4, self.images.back);
 	self.images.back:addEventListener('touch', closeDiary);
+end
+
+function Diary:showDiaryIcon()
+	transition.to(self.images.diaryIcon, {
+		time = 1000,
+		x = (display.contentWidth - self.images.diaryIcon.contentWidth/2)
+	});
+end
+
+function Diary:hideDiaryIcon()
+	transition.to(self.images.diaryIcon, {
+		time = 100,
+		x = (display.contentWidth + self.images.diaryIcon.contentWidth/2)
+	});
+	self.displayGroup:insert(1, self.images.diaryIcon);
 end
 
 -- Init diary text

@@ -11,6 +11,16 @@ Timer.metatable.__index = Timer;
 
 -- Add timer
 function Timer:showTimer(func)
+	if globalConfig.openedWindow then
+		return;
+	end
+
+	if func == nil then
+		func = function() end;
+	end
+
+	globalConfig.openedWindow = true;
+
 	self.timer = display.newImage( 'img/timer/clock.png', display.contentCenterX, display.contentCenterY);
 	self.hand = display.newImage( 'img/timer/hand.png', 618, 350);
 	self.center_clock = display.newImage( 'img/timer/center_clock.png', 618, 350);
@@ -25,7 +35,11 @@ function Timer:showTimer(func)
 	local function animateTimer()
 		local function endAnim()
 			transition.fadeOut(self.hand, {time = 1000});
-			transition.fadeOut(self.center_clock, {time = 1000, onComplete=func});
+			transition.fadeOut(self.center_clock, {time = 1000, onComplete = function()
+				globalConfig.openedWindow = false;
+
+				func();
+			end});
 			transition.fadeOut(self.timer, {time = 1000});
 			snd:stop("timer","snd1");
 		end

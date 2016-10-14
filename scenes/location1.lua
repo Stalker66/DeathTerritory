@@ -8,9 +8,6 @@
 local Location1Event1 = composer.newScene(); -- Создаём новую сцену
 
 function Location1Event1:create(event)
-	inventory:new(); -- Init inventory
-	diary:new(); -- Init diary
-
 	-- ПЕРЕМЕННЫЕ
 	local grpLocation1Event1 = self.view; -- Группа
 	local imgBackgroundLoc1 = display.newImage(grpLocation1Event1, "img/location1.jpg", display.contentCenterX, display.contentCenterY ); -- Фоновый рисунок
@@ -51,7 +48,7 @@ function Location1Event1:create(event)
 				dialogs:removeDialog(); -- Удалить диалог
 				tutorials:showArrow("touchTutorial",490,185,"vertical");
 				transition.to( imgCharacterLena, { time=800, x=1150, y=460, width=220, height=622, onComplete=funcEventOne } );
-				displayGroup:toFront( );
+				displayGroup:toFront();
 			end	
 		end
 	end

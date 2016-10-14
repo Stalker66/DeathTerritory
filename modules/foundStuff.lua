@@ -40,9 +40,19 @@ function FoundStuff:showStuff(name)
 	self.images[name].isVisible = true;
 end
 
+function FoundStuff:hideStuff(name)
+	if not self.images[name].pickUped then
+		self.images[name].isVisible = false;
+	end
+end
+
+function FoundStuff:throwStuff(name)
+	FoundStuff:usedStuff(name);
+end
+
 function FoundStuff:pickUp(name)
 	-- Pick up stuff only once
-	if self.images[name].pickUped then
+	if (self.images[name].pickUped or globalConfig.openedWindow == true) then
 		return;
 	end
 
@@ -83,6 +93,10 @@ function FoundStuff:usedStuff(name)
 			self.images[name].isVisible = false
 		end
 	})
+end
+
+function FoundStuff:getPickedUp(name)
+	return self.images[name].pickUped;
 end
 
 -- Hide all stuffs

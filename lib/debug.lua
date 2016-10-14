@@ -36,5 +36,21 @@ function Debug:print_r ( t )
     print()
 end
 
+function Debug:getMousePoint(view)
+    view:addEventListener('touch', function(event)
+        if event.phase == 'began' then
+            print(table.concat({'Touch coordinates: ', event.x, ', ', event.y}, ''));
+        end
+    end);
+end
+
+function Debug:getMask()
+    local debugRect = display.newRect(0, 0, display.contentWidth, display.contentHeight);
+    debugRect.x = debugRect.width/2;
+    debugRect.y = debugRect.height/2;
+    debugRect.alpha = 0.1;
+
+    return debugRect;
+end
 
 return Debug;

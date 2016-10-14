@@ -4,6 +4,17 @@
 -- Выпадко Владислав
 -----------------------------------------------------------------------------------------
 
+-- Debug package
+_G.Debug = require('lib.debug');
+
+globalConfig = {
+	language = "Rus", --  Переменная содержит выбранный язык приложения
+	soundOnGame = false, --  Переменная содержит параметры звука
+	alpha = 0.3, -- Прозрачность кнопок в игре
+	openedWindow = false, -- Открыто ли окно,
+	canGo = true
+}
+
 -- Подгрузка библиотек
 composer = require "composer"; -- Подгружаем библиотеку создания сцен
 widget = require("widget"); -- Подгружаем библиотеку виджетов
@@ -24,20 +35,11 @@ weapon:new();
 foundStuff = require('modules.foundStuff');
 foundStuff:new();
 displayGroup = display.newGroup();
-displayGroup:insert(diary:getDisplayGroup());
-displayGroup:insert(inventory:getDisplayGroup());
 displayGroup:insert(zombieAnimations:getDisplayGroup());
 displayGroup:insert(weapon:getDisplayGroup());
-displayGroup:insert(foundStuff:getDisplayGroup());
--- Debug package
-_G.Debug = require('lib.debug');
-
-globalConfig = {
-	language = "Rus", --  Переменная содержит выбранный язык приложения
-	soundOnGame = false, --  Переменная содержит параметры звука
-	alpha = 0.01, -- Прозрачность кнопок в игре
-	openedWindow = false -- Открыто ли окно
-}
+--displayGroup:insert(foundStuff:getDisplayGroup());
+displayGroup:insert(diary:getDisplayGroup());
+displayGroup:insert(inventory:getDisplayGroup());
 
 -- ФУНКЦИИ
 -- Загружаем текст
@@ -66,10 +68,15 @@ end
 
 loadLocalization(globalConfig.language); -- Подгрузка/Обновление файла локализации
 
+inventory:new(); -- Init inventory
+diary:new(); -- Init diary
+
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene( "scenes.location_farm_outside", "fade", 500 ); -- Тестовый переход на локацию 1
+--composer.gotoScene( "scenes.location_tunel_door", "fade", 500 ); -- Тестовый переход на локацию 1
+--composer.gotoScene( "scenes.location_basement", "fade", 500 ); -- Тестовый переход на локацию 1
+composer.gotoScene( "scenes.location_farm_outside", "fade", 500 );
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);

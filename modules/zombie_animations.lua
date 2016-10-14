@@ -25,6 +25,9 @@ function ZombieAnimations:showDeadMenu()
 	self.images.deadMenu.exit.isVisible = true;
 	self.images.deadMenu.tryAdain.isVisible = true;
 
+	diary:hideDiaryIcon();
+	inventory:hideInventoryIcon();
+
 	-- Hide all current visible stuffs
 	Runtime:dispatchEvent({
 		name = 'KillPlayer'
@@ -78,14 +81,28 @@ function ZombieAnimations:setImagesDeadMenu()
 		if event.phase == 'began' then
 			ZombieAnimations:hideAllDisplayObjects();
 
-			composer.gotoScene('scenes.location_farm_outside');
-			composer.removeScene( "scenes.location_farm_inside" );
+			composer.removeScene(composer.getSceneName('current'));
+			composer.gotoScene(self.images.deadMenu.tryAdain.path);
 		end
 	end);
 end
 
+function ZombieAnimations:setTryAgainScene(name)
+	self.images.deadMenu.tryAdain.path = name;
+end
+
 -- Init images for zombies
 function ZombieAnimations:setImages()
+	-- Background
+	self.images.background = display.newRect(0, 0, display.contentWidth, display.contentHeight);
+	self.images.background.x = self.images.background.width/2;
+	self.images.background.y = self.images.background.height/2;
+	self.images.background.alpha = globalConfig.alpha;
+	self.images.background.isVisible = false;
+	self.images.background:addEventListener('tap', function() return true; end);
+	self.images.background:addEventListener('touch', function() return true; end);
+	self.displayGroup:insert(self.images.background);
+
 	-- Farm zombie idle
 	self.images.farm = {};
 	self.images.farm.idle = display.newImage('img/zombie_animations/farm/idle.png');
@@ -98,42 +115,49 @@ function ZombieAnimations:setImages()
 	self.images.farm.goal = display.newCircle(0, 0, 75);
 	self.images.farm.goal.x = display.contentCenterX + 30;
 	self.images.farm.goal.y = display.contentCenterY - 160;
-	self.images.farm.goal.alpha = 0;
+	self.images.farm.goal.alpha = globalConfig.alpha;
 	self.images.farm.goal.kill = false;
 	self.images.farm.goal.clickToKill = 0;
 	self.images.farm.goal.clicksToKill = 3;
 	self.images.farm.goal:setFillColor(0.5);
+	self.images.farm.goal.isVisible = false;
 	self.displayGroup:insert(self.images.farm.goal);
-	self.displayGroup:addEventListener('touch', function(event)
-		if (event.phase == 'began' and self.images.farm.goal.clickToKill >= self.images.farm.goal.clicksToKill and self.images.farm.goal.kill == false) then
+	self.images.farm.goal:addEventListener('touch', function(event)
+		if (event.phase == 'began' and self.images.farm.goal.clickToKill >= self.images.farm.goal.clicksToKill and self.images.farm.goal.kill == false
+			and weapon:getAlreadyGet('wrench') == true) then
 			self.images.farm.goal.kill = true;
 			
 			transition.cancel(self.images.farm.idle);
-			self.images.farm.idle.isVisible = false;
 
 			-- Throw weapon
-			weapon:throw('wrench');
-
-			--	Add animation kill zombie
-			self.images.farm.dead.isVisible = true;
-			local deadTime = 500;
-
-			transition.to(self.images.farm.dead.path, {
-				time = deadTime,
-				x1 = 100,
-				y1 = 300,
-				x4 = -100,
-				y4 = 300
-			});
-
-			transition.to(self.images.farm.dead, {
-				time = deadTime,
-				y = self.images.farm.dead.y + 150, 
+			weapon:attack('wrench', {
 				onComplete = function()
-					transition.fadeOut(self.images.farm.dead, {
-						time = 10,
+					self.images.farm.idle.isVisible = false;
+
+					--	Add animation kill zombie
+					self.images.farm.dead.isVisible = true;
+					local deadTime = 500;
+
+					transition.to(self.images.farm.dead.path, {
+						time = deadTime,
+						x1 = 100,
+						y1 = 300,
+						x4 = -100,
+						y4 = 300
+					});
+
+					transition.to(self.images.farm.dead, {
+						time = deadTime,
+						y = self.images.farm.dead.y + 150, 
 						onComplete = function()
-							self.images.farm.dead.isVisible = false;
+							transition.fadeOut(self.images.farm.dead, {
+								time = 10,
+								onComplete = function()
+									self.images.farm.dead.isVisible = false;
+									self.images.background.isVisible = false;
+									self.images.farm.goal.alpha = false;
+								end
+							});
 						end
 					});
 				end
@@ -160,15 +184,84 @@ function ZombieAnimations:setImages()
 	-- Basement sprit
 	self.images.basement = {}
 	self.images.basement.spirit = display.newImage('img/zombie_animations/basement/spririt.png');
-	self.images.basement.spirit.x = 450;--display.contentCenterX + 30;
-	self.images.basement.spirit.y = 320;--self.images.basement.spirit.height/2;
+	self.images.basement.spirit.x = 450;
+	self.images.basement.spirit.y = 320;
 	self.images.basement.spirit.alpha = 0;
-	self.images.basement.spirit.isVisible = true;
+	self.images.basement.spirit.isVisible = false;
 	self.displayGroup:insert(self.images.basement.spirit);
+
+	-- Basement sprit goal
+	self.images.basement.goal = {};
+	self.images.basement.goal.kill = false;
+
+	-- Tunel zombie
+	self.images.tunelEnter = {}
+	self.images.tunelEnter.zombie = display.newImage('img/zombie_animations/tunelEnter/zombie.png');
+	self.images.tunelEnter.zombie.x = display.contentCenterX;
+	self.images.tunelEnter.zombie.y = display.contentHeight - 120;
+	self.images.tunelEnter.zombie.isVisible = false;
+	self.displayGroup:insert(self.images.tunelEnter.zombie);
+
+	-- Tunel zombie goal
+	self.images.tunelEnter.goal = {};
+	self.images.tunelEnter.goal.kill = false;
+
+	self.images.tunelEnter.goal = display.newCircle(0, 0, 50);
+	self.images.tunelEnter.goal.x = display.contentCenterX + 30;
+	self.images.tunelEnter.goal.y = display.contentCenterY - 80;
+	self.images.tunelEnter.goal.alpha = globalConfig.alpha;
+	self.images.tunelEnter.goal.kill = false;
+	self.images.tunelEnter.goal.clickToKill = 0;
+	self.images.tunelEnter.goal.clicksToKill = 3;
+	self.images.tunelEnter.goal:setFillColor(0.5);
+	self.images.tunelEnter.goal.isVisible = false;
+	self.displayGroup:insert(self.images.tunelEnter.goal);
+	self.images.tunelEnter.goal:addEventListener('touch', function(event)
+		if (event.phase == 'began' and self.images.tunelEnter.goal.clickToKill >= self.images.tunelEnter.goal.clicksToKill and self.images.tunelEnter.goal.kill == false
+			and weapon:getAlreadyGet('basementAx') == true) then
+			self.images.tunelEnter.goal.kill = true;
+			
+			transition.cancel(self.images.tunelEnter.zombie);
+
+			-- Throw weapon
+			weapon:attack('tunelEnter', {
+				onComplete = function()
+					transition.to(self.images.tunelEnter.zombie.path, {
+						time = 400,
+						y1 = 100,
+						y4 = 100
+					});
+
+					transition.to(self.images.tunelEnter.zombie, {
+						time = 400,
+						y = self.images.tunelEnter.zombie.y + 100,
+						onComplete = function()
+							self.images.tunelEnter.zombie.isVisible = false;
+							transition.fadeOut(self.images.tunelEnter.zombie, {
+								time = 10,
+								onComplete = function()
+									self.images.tunelEnter.zombie.isVisible = false;
+									self.images.background.isVisible = false;
+									self.images.tunelEnter.goal.alpha = false;
+								end
+							});
+						end
+					});
+				end
+			});
+		elseif self.images.tunelEnter.goal.kill == false then
+			print('this')
+			self.images.tunelEnter.goal.clickToKill = self.images.tunelEnter.goal.clickToKill + 1;
+		end
+	end);
 end
 
--- Start animation by nam
+-- Start animation by name
 function ZombieAnimations:start(animationName, options)
+	if self.images[animationName].goal.kill then
+		return;
+	end
+
 	if options == nil then
 		options = {};
 	end
@@ -177,37 +270,28 @@ function ZombieAnimations:start(animationName, options)
 		options.onComplete = function() end;
 	end
 
+	self.images.background.isVisible = true;
+
 	if animationName == 'farm' then
-		local attack = function()
-			self.images.farm.idle.isVisible = false;
-			self.images.farm.attack.isVisible = true;
-			self.images.farm.attack.x = display.contentCenterX;
-			self.images.farm.attack.y = display.contentCenterY;
-
-			transition.to(self.images.farm.attack, {
-				time = 250,
-				xScale = 1.2,
-				yScale = 1.2,
-				onComplete = function()
-					ZombieAnimations:showDeadMenu();
-
-					transition.to(self.images.farm.attack, {
-						time = 350,
-						xScale = 1,
-						yScale = 1
-					});
-				end
-			});
-		end
-
+		self.images.farm.goal.isVisible = true;
 		self.images.farm.idle.isVisible = true;
+
 		ZombieAnimations:shakeLeftToRigth(self.images.farm.idle, {
 			time = 800,
 			distance = 10,
 			repeats = 3,
-			listener = attack
+			listener = function()
+				self.images.farm.idle.isVisible = false;
+				self.images.farm.attack.isVisible = true;
+				self.images.farm.attack.x = display.contentCenterX;
+				self.images.farm.attack.y = display.contentCenterY;
+
+				weapon:resetWeapon('wrench');
+				ZombieAnimations:setTryAgainScene('scenes.location_farm_outside');
+				ZombieAnimations:attack(self.images.tunelEnter.zombie);
+			end
 		});
-	elseif animationName == 'spirit' then
+	elseif animationName == 'basement' then
 		local animationTime = 2000;
 		local fadeInTime = 300;
 		local fadeOutTime = 500;
@@ -276,8 +360,25 @@ function ZombieAnimations:start(animationName, options)
 			y = display.contentHeight - self.images.basement.spirit.height/2,
 			onComplete = function()
 				self.images.basement.spirit.isVisible = false;
+				self.images.basement.goal.kill = true;
+				self.images.background.isVisible = false;
 
 				options.onComplete();
+			end
+		});
+	elseif animationName == 'tunelEnter' then
+		self.images.tunelEnter.goal.isVisible = true;
+		self.images.tunelEnter.zombie.isVisible = true;
+
+		ZombieAnimations:shakeLeftToRigth(self.images.tunelEnter.zombie, {
+			time = 800,
+			distance = 10,
+			repeats = 3,
+			listener = function()
+				weapon:resetWeapon('basementAx');
+
+				ZombieAnimations:setTryAgainScene('scenes.location_basement');
+				ZombieAnimations:attack(self.images.tunelEnter.zombie);
 			end
 		});
 	end
@@ -312,6 +413,29 @@ function ZombieAnimations:shakeLeftToRigth(element, options)
 			ZombieAnimations:shakeLeftToRigth(element, options);
 		end
 	});
+end
+
+function ZombieAnimations:attack(zombie, name)
+	if name == nil then
+		name = 'default';
+	end
+
+	if name == 'default' then
+		transition.to(zombie, {
+			time = 250,
+			xScale = 1.2,
+			yScale = 1.2,
+			onComplete = function()
+				ZombieAnimations:showDeadMenu();
+
+				transition.to(zombie, {
+					time = 350,
+					xScale = 1,
+					yScale = 1
+				});
+			end
+		});
+	end
 end
 
 -- Get diary display group

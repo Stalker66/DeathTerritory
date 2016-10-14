@@ -27,6 +27,7 @@ Inventory.metatable.__index = Inventory;
 function Inventory:new(event)
 	Inventory:setImages();
 	Inventory:setFindStuffs();
+	Inventory:showInventoryIcon();
 end
 
 -- Set inventory stuff images
@@ -35,10 +36,6 @@ function Inventory:setImages()
 	self.stuffs.background = display.newImage( 'img/inventory/cels.png', 0, display.contentCenterY);
 	self.stuffs.background.x = -self.stuffs.background.width/2;
 	self.displayGroup:insert(self.stuffs.background);
-	transition.to(self.stuffs.background, {
-		time = 1000,
-		x = self.stuffs.background.width/2
-	});
 
 	-- Map
 	self.stuffs.map = display.newImage('img/inventory/map.png', 0, display.contentCenterY);
@@ -93,6 +90,20 @@ function Inventory:setImages()
 		item:addEventListener("touch", function() return true end)
 		item:addEventListener("tap", function() return true end)
 	end
+end
+
+function Inventory:showInventoryIcon()
+	transition.to(self.stuffs.background, {
+		time = 1000,
+		x = self.stuffs.background.width/2
+	});
+end
+
+function Inventory:hideInventoryIcon()
+	transition.to(self.stuffs.background, {
+		time = 100,
+		x = -self.stuffs.background.width/2
+	});
 end
 
 -- Add find stuffs
