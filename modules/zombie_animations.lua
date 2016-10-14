@@ -42,6 +42,9 @@ function ZombieAnimations:setImagesDeadMenu()
 	self.displayGroup:insert(self.images.deadMenu.exit);
 	self.images.deadMenu.exit:addEventListener('touch', function(event)
 		if event.phase == 'began' then
+			self.images.deadMenu.exit.isVisible = false;
+			self.images.farm.attack.isVisible = false;
+			self.images.deadMenu.tryAdain.isVisible = false;
 			self.displayGroup.isVisible = false;
 
 			Runtime:dispatchEvent({
@@ -60,11 +63,14 @@ function ZombieAnimations:setImagesDeadMenu()
 	self.displayGroup:insert(self.images.deadMenu.tryAdain);
 	self.images.deadMenu.tryAdain:addEventListener('touch', function(event)
 		if event.phase == 'began' then
-			-- @todo remove after go to nex scene
+			self.images.deadMenu.background.isVisible = false;
+			self.images.deadMenu.exit.isVisible = false;
+			self.images.farm.attack.isVisible = false;
+			self.images.deadMenu.tryAdain.isVisible = false;
 			self.displayGroup.isVisible = false;
 
-			composer.gotoScene('scenes.location_farm_outside');
 			composer.removeScene( "scenes.location_farm_inside" );
+			composer.gotoScene('scenes.location_farm_outside');
 		end
 	end);
 end
@@ -125,6 +131,7 @@ function ZombieAnimations:setImages()
 end
 
 function ZombieAnimations:start(animationName, options)
+	self.displayGroup.isVisible = true;
 	if options == nil then
 		options = {};
 	end

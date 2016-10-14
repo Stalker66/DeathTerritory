@@ -63,7 +63,7 @@ loadLocalization(globalConfig.language); -- Подгрузка/Обновлен�
 -- Переходим к игре
 display.setStatusBar( display.HiddenStatusBar ); -- Скрываем статус бар
 --composer.gotoScene("scenes.main_menu", "fade", 500); -- Переход на сцену "Меню"
-composer.gotoScene( "scenes.location_farm_outside", "fade", 500 ); -- Тестовый переход на локацию 1
+composer.gotoScene( "scenes.location_basement", "fade", 500 ); -- Тестовый переход на локацию 1
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);

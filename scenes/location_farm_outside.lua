@@ -23,8 +23,8 @@ function LocationFarmOutsideEvent:create(event)
 			-- @todo fix remove object after go to nex scene
 			door.isVisible = false;
 
-			composer.gotoScene('scenes.location_farm_inside');
 			composer.removeScene( "scenes.location_farm_outside" );
+			composer.gotoScene('scenes.location_farm_inside');
 		end
 	end);
 end
