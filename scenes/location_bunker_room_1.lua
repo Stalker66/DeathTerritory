@@ -17,11 +17,32 @@ function LocationBunkerRoom1Event1:create(event)
 	back.y = display.contentHeight - back.height/2;
 	back:addEventListener('touch', function(event)
 		if event.phase == 'began' then
+			if globalConfig.openedWindow == true then
+				return;
+			end
+			
 			composer.removeScene(composer.getSceneName('current'));
 			composer.gotoScene('scenes.location_bunker_enter');
 		end
 	end);
 	grpBunkerRoom1Scene:insert(back);
+
+	local door = display.newRect(grpBunkerRoom1Scene, 330, 320, 200, 430);
+	door.rotation = -1;
+	door.alpha = globalConfig.alpha;
+	door:addEventListener('touch', function(event)
+		if event.phase == 'began' then
+			if not globalData.codeDoor.open then
+				return;
+			end
+
+			inventory:hideFindStuff('scheme');
+
+			composer.removeScene(composer.getSceneName('current'));
+			composer.gotoScene('scenes.location_bunker_room_4');
+		end
+	end);
+	door:addEventListener('tap', function() return true; end);
 
 	inventory:showFindStuff('scheme');
 end

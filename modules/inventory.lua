@@ -146,6 +146,11 @@ function Inventory:showFindStuff(name)
 	self.stuffs.find[name].isVisible = true;
 end
 
+-- Set unvisible for find stuff at location
+function Inventory:hideFindStuff(name)
+	self.stuffs.find[name].isVisible = false;
+end
+
 -- Show find stuff and animate it to inventory tollbar
 function Inventory:addFindStuff(name, delay)
 	transition.to(self.stuffs.find[name], {

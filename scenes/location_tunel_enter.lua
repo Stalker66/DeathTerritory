@@ -35,7 +35,7 @@ function LocationTunelEvent:create(event)
 		end
 	end);
 	grpLocationTunelEvent:insert(tunelDoor);
-
+	
 	-- Debug get position
 	local debugRect = Debug:getMask();
 	grpLocationTunelEvent:insert(debugRect);

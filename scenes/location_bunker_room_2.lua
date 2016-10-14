@@ -17,11 +17,30 @@ function LocationBunkerRoom2Event1:create(event)
 	back.y = display.contentHeight - back.height/2;
 	back:addEventListener('touch', function(event)
 		if event.phase == 'began' then
+			if globalConfig.openedWindow == true then
+				return;
+			end
+			
 			composer.removeScene(composer.getSceneName('current'));
 			composer.gotoScene('scenes.location_bunker_enter');
 		end
 	end);
 	grpBunkerRoom2Scene:insert(back);
+
+	local desk = display.newRect(grpBunkerRoom2Scene, 480, 390, 400, 380);
+	desk.alpha = globalConfig.alpha;
+	desk:addEventListener('touch', function(event)
+		if event.phase == 'began' then
+			composer.removeScene(composer.getSceneName('current'));
+			composer.gotoScene('scenes.location_bunker_room_3');
+		end
+	end);
+	desk:addEventListener('tap', function() return true; end);
+
+	-- Debug get position
+	local debugRect = Debug:getMask();
+	grpBunkerRoom2Scene:insert(debugRect);
+	Debug:getMousePoint(debugRect);
 end
 
 LocationBunkerRoom2Event1:addEventListener("create", LocationBunkerRoom2Event1); -- Создание сцены
