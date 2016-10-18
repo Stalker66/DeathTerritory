@@ -254,6 +254,135 @@ function ZombieAnimations:setImages()
 			self.images.tunelEnter.goal.clickToKill = self.images.tunelEnter.goal.clickToKill + 1;
 		end
 	end);
+
+	-- Bunker room 5 zombie
+	self.images.bunker_room_5 = {}
+	self.images.bunker_room_5.zombie = display.newImage('img/zombie_animations/bunker_room_5/zombie.png');
+	self.images.bunker_room_5.zombie.x = display.contentCenterX;
+	self.images.bunker_room_5.zombie.y = display.contentHeight - 120;
+	self.images.bunker_room_5.zombie.isVisible = false;
+	self.displayGroup:insert(self.images.bunker_room_5.zombie);
+
+	-- Bunker room 5 goal
+	self.images.bunker_room_5.goal = {};
+	self.images.bunker_room_5.goal.kill = false;
+
+	self.images.bunker_room_5.goal = display.newCircle(0, 0, 50);
+	self.images.bunker_room_5.goal.x = display.contentCenterX + 10;
+	self.images.bunker_room_5.goal.y = display.contentCenterY - 115;
+	self.images.bunker_room_5.goal.alpha = globalConfig.alpha;
+	self.images.bunker_room_5.goal.kill = false;
+	self.images.bunker_room_5.goal.clickToKill = 0;
+	self.images.bunker_room_5.goal.clicksToKill = 3;
+	self.images.bunker_room_5.goal:setFillColor(0.5);
+	self.images.bunker_room_5.goal.isVisible = false;
+	self.displayGroup:insert(self.images.bunker_room_5.goal);
+	self.images.bunker_room_5.goal:addEventListener('touch', function(event)
+		if (event.phase == 'began' and self.images.bunker_room_5.goal.clickToKill >= self.images.bunker_room_5.goal.clicksToKill and self.images.bunker_room_5.goal.kill == false
+			and weapon:getAlreadyGet('basementAx') == true) then
+			self.images.bunker_room_5.goal.kill = true;
+			
+			transition.cancel(self.images.bunker_room_5.zombie);
+
+			-- Throw weapon
+			weapon:attack('tunelEnter', {
+				onComplete = function()
+					transition.to(self.images.bunker_room_5.zombie.path, {
+						time = 400,
+						y1 = 100,
+						y4 = 100
+					});
+
+					transition.to(self.images.bunker_room_5.zombie, {
+						time = 400,
+						y = self.images.bunker_room_5.zombie.y + 100,
+						onComplete = function()
+							self.images.bunker_room_5.zombie.isVisible = false;
+							transition.fadeOut(self.images.bunker_room_5.zombie, {
+								time = 10,
+								onComplete = function()
+									self.images.bunker_room_5.zombie.isVisible = false;
+									self.images.background.isVisible = false;
+									self.images.bunker_room_5.goal.alpha = false;
+								end
+							});
+						end
+					});
+				end
+			});
+		elseif self.images.bunker_room_5.goal.kill == false then
+			self.images.bunker_room_5.goal.clickToKill = self.images.bunker_room_5.goal.clickToKill + 1;
+		end
+	end);
+
+	-- Bunker room 6 zombie
+	self.images.bunker_room_6 = {}
+	self.images.bunker_room_6.zombie = display.newImage('img/zombie_animations/bunker_room_6/zombie.png');
+	self.images.bunker_room_6.zombie.x = display.contentCenterX + 30;
+	self.images.bunker_room_6.zombie.y = display.contentHeight - 210;
+	self.images.bunker_room_6.zombie.isVisible = false;
+	self.displayGroup:insert(self.images.bunker_room_6.zombie);
+
+	-- Bunker room 6 goal
+	self.images.bunker_room_6.goal = {};
+	self.images.bunker_room_6.goal.kill = false;
+
+	self.images.bunker_room_6.goal = display.newCircle(0, 0, 50);
+	self.images.bunker_room_6.goal.x = display.contentCenterX - 10;
+	self.images.bunker_room_6.goal.y = display.contentCenterY - 125;
+	self.images.bunker_room_6.goal.alpha = globalConfig.alpha;
+	self.images.bunker_room_6.goal.kill = false;
+	self.images.bunker_room_6.goal.clickToKill = 0;
+	self.images.bunker_room_6.goal.clicksToKill = 3;
+	self.images.bunker_room_6.goal:setFillColor(0.5);
+	self.images.bunker_room_6.goal.isVisible = false;
+	self.displayGroup:insert(self.images.bunker_room_6.goal);
+	self.images.bunker_room_6.goal:addEventListener('touch', function(event)
+		if (event.phase == 'began' and self.images.bunker_room_6.goal.clickToKill >= self.images.bunker_room_6.goal.clicksToKill and self.images.bunker_room_6.goal.kill == false
+			and weapon:getAlreadyGet('basementAx') == true) then
+			self.images.bunker_room_6.goal.kill = true;
+			
+			transition.cancel(self.images.bunker_room_6.zombie);
+
+			-- Throw weapon
+			weapon:attack('tunelEnter', {
+				onComplete = function()
+					transition.to(self.images.bunker_room_6.zombie.path, {
+						time = 400,
+						y1 = 100,
+						y4 = 100
+					});
+
+					transition.to(self.images.bunker_room_6.zombie, {
+						time = 400,
+						y = self.images.bunker_room_6.zombie.y + 100,
+						onComplete = function()
+							self.images.bunker_room_6.zombie.isVisible = false;
+							transition.fadeOut(self.images.bunker_room_6.zombie, {
+								time = 10,
+								onComplete = function()
+									self.images.bunker_room_6.zombie.isVisible = false;
+									self.images.background.isVisible = false;
+									self.images.bunker_room_6.goal.alpha = false;
+								end
+							});
+						end
+					});
+				end
+			});
+		elseif self.images.bunker_room_6.goal.kill == false then
+			self.images.bunker_room_6.goal.clickToKill = self.images.bunker_room_6.goal.clickToKill + 1;
+		end
+	end);
+
+	-- Bunker outside person
+	self.images.bunker_outside = {}
+	self.images.bunker_outside.person = display.newImage('img/zombie_animations/bunker_outside/person.png');
+	self.images.bunker_outside.person:scale(0.7, 0.7);
+	self.images.bunker_outside.person.x = 963;
+	self.images.bunker_outside.person.y = 570;
+	self.images.bunker_outside.person.isVisible = false;
+	self.displayGroup:insert(self.images.bunker_outside.person);
 end
 
 -- Start animation by name
@@ -381,6 +510,36 @@ function ZombieAnimations:start(animationName, options)
 				ZombieAnimations:attack(self.images.tunelEnter.zombie);
 			end
 		});
+	elseif animationName == 'bunker_room_5' then
+		self.images.bunker_room_5.goal.isVisible = true;
+		self.images.bunker_room_5.zombie.isVisible = true;
+
+		ZombieAnimations:shakeLeftToRigth(self.images.bunker_room_5.zombie, {
+			time = 800,
+			distance = 10,
+			repeats = 3,
+			listener = function()
+				weapon:resetWeapon('basementAx');
+
+				ZombieAnimations:setTryAgainScene('scenes.location_bunker_room_4');
+				ZombieAnimations:attack(self.images.bunker_room_5.zombie);
+			end
+		});
+	elseif animationName == 'bunker_room_6' then
+		self.images.bunker_room_6.goal.isVisible = true;
+		self.images.bunker_room_6.zombie.isVisible = true;
+
+		ZombieAnimations:shakeLeftToRigth(self.images.bunker_room_6.zombie, {
+			time = 800,
+			distance = 10,
+			repeats = 3,
+			listener = function()
+				weapon:resetWeapon('basementAx');
+
+				ZombieAnimations:setTryAgainScene('scenes.location_bunker_room_4');
+				ZombieAnimations:attack(self.images.bunker_room_6.zombie);
+			end
+		});
 	end
 end
 
@@ -435,6 +594,16 @@ function ZombieAnimations:attack(zombie, name)
 				});
 			end
 		});
+	end
+end
+
+function ZombieAnimations:showAnimation(animationName)
+	if animationName == 'bunkerOutside' then
+		self.images.bunker_outside.person.isVisible = true;
+
+		timer.performWithDelay(1000, function()
+
+		end);
 	end
 end
 

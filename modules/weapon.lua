@@ -171,6 +171,31 @@ function Weapon:attack(name, options)
 				});
 			end
 		});
+	elseif name == 'bunkerOutside' then
+		local time = 500;
+
+		transition.to(self.images.basementAx, {
+			time = 300,
+			x = 364,
+			y = 330,
+			xScale = 0.85,
+			yScale = 0.85,
+			rotation = -110,
+			onComplete = function()
+				transition.to(self.images.basementAx, {
+					time = 780,
+					x = 859,
+					y = 551,
+					xScale = 0.15,
+					yScale = 0.15,
+					rotation = 660,
+					onComplete = function()
+						Weapon:showBlood();
+						options.onComplete();
+					end
+				});
+			end
+		});
 	end
 end
 

@@ -29,6 +29,18 @@ function FoundStuff:setImages()
 	self.images.farmKey.used = false;
 	self.displayGroup:insert(self.images.farmKey);
 
+	-- Bunker room 6 key
+	self.images.bunkerRoom6Key = display.newImage('img/stuffs/key.png');
+	self.images.bunkerRoom6Key:scale(0.1, 0.1);
+	self.images.bunkerRoom6Key.x = 1244;
+	self.images.bunkerRoom6Key.y = 468;
+	self.images.bunkerRoom6Key.rotation = -65;
+	self.images.bunkerRoom6Key.isVisible = false;
+	-- Pick uped element
+	self.images.bunkerRoom6Key.pickUped = false;
+	self.images.bunkerRoom6Key.used = false;
+	self.displayGroup:insert(self.images.bunkerRoom6Key);
+
 	for key, item in pairs(self.images) do
 		item:addEventListener('touch', function(event)
 			FoundStuff:pickUp(key);

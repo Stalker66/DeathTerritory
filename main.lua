@@ -88,7 +88,7 @@ display.setStatusBar( display.HiddenStatusBar ); -- Скрываем стату�
 --composer.gotoScene( "scenes.location_tunel_door", "fade", 500 ); -- Тестовый переход на локацию 1
 --composer.gotoScene( "scenes.location_basement", "fade", 500 ); -- Тестовый переход на локацию 1
 --composer.gotoScene( "scenes.location_farm_outside", "fade", 500 );
-composer.gotoScene( "scenes.location_bunker_room_1", "fade", 500 );
+composer.gotoScene( "scenes.location_bunker_outside", "fade", 500 );
 
 -- FPS
 fpsText = display.newText(display.fps, 50, 50, native.systemFont, 60);

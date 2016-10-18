@@ -21,6 +21,8 @@ function LocationBunkerRoom1Event1:create(event)
 				return;
 			end
 			
+			inventory:hideFindStuff('scheme');
+
 			composer.removeScene(composer.getSceneName('current'));
 			composer.gotoScene('scenes.location_bunker_enter');
 		end
